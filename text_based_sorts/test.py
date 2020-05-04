@@ -1,7 +1,7 @@
 # import the sorts here
 from InsertionSort import insertion_sort
 from SelectionSort import selection_sort
-from BubbleSort import bubble_sort 
+from BubbleSort import bubble_sort
 
 import random
 import time
@@ -77,10 +77,10 @@ def test_quick():
 
     pass
 
+
 def test_merge():
 
     pass
-
 
 
 def main():
