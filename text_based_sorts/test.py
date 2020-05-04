@@ -49,7 +49,6 @@ def test_selection():
     # time tracking of the sort
     start_time = time.time()
     selection_sort(test_list)
-
     final_time = time.time()
 
     total_time = final_time - start_time
@@ -61,8 +60,11 @@ def test_selection():
 
 
 def test_bubble():
+    test_list = [random.randint(0, 1000) for i in range(1000)] 
 
-    pass
+    start_time = time.time()
+
+
 
 
 def test_merge():
