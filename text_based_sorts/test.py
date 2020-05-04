@@ -74,8 +74,18 @@ def test_bubble():
 
 
 def test_quick():
+    test_list = [random.randint(0, 1000) for i in range(1000)] 
 
-    pass
+    start_time = time.time()
+    # quick_sort()
+    final_time = time.time() 
+
+    total_time = final_time - start_time 
+    result_str = generate_results(test_list, total_time, "Quick")
+
+    print(result_str)
+
+    return None 
 
 
 def test_merge():
