@@ -48,11 +48,14 @@ def test_selection():
 
     # time tracking of the sort
     start_time = time.time()
-    selection_sort(test_list, 0, len(test_list) - 1)
+    selection_sort(test_list)
+
     final_time = time.time()
 
     total_time = final_time - start_time
     result_str = generate_results(test_list, total_time, "Selection")
+
+    print(result_str)
 
     return None
 

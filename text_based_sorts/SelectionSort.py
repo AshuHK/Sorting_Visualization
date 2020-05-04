@@ -10,12 +10,18 @@ def _swap(test_list, x, y):
     test_list[x], test_list[y] = test_list[y], test_list[x]
 
 
-def selection_sort(unsorted, start, end): 
+def selection_sort(unsorted): 
     """
     Does an selection sort on a Python list given a range of indicies 
     Expected Complexity: O(n^2) (time) and O(1) (space)
 
-    :param unsorted: Python list that is to be sorted  
-    :param start: integer of the starting index to be sorted  
-    :param end: integer of the ending index to be sorted 
+    :param unsorted: unsorted Python list to be sorted  
     """
+    for i in range(len(unsorted)): 
+
+        min_index = i 
+        for j in range(i + 1, len(unsorted)): 
+            if unsorted[min_index] > unsorted[j]: 
+                min_index = j 
+
+        _swap(unsorted, i, min_index)
