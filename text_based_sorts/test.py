@@ -73,14 +73,14 @@ def test_bubble():
     return None
 
 
+def test_quick():
+
+    pass
+
 def test_merge():
 
     pass
 
-
-def test_quick():
-
-    pass
 
 
 def main():
@@ -94,9 +94,9 @@ def main():
 
     test_bubble()
 
-    test_merge()
-
     test_quick()
+
+    test_merge()
 
     print()
 
