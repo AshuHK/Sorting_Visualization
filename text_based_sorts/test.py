@@ -96,6 +96,8 @@ def test_merge():
 
 def main():
 
+    # TODO: allow input to test different input sizes 
+
     # just adding an empty line for readability
     print()
 
