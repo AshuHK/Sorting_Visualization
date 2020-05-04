@@ -3,6 +3,7 @@ from InsertionSort import insertion_sort
 from SelectionSort import selection_sort
 from BubbleSort import bubble_sort
 from QuickSort import quick_sort
+from MergeSort import merge_sort
 
 import random
 import time
