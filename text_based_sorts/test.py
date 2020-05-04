@@ -5,6 +5,15 @@ import random
 import time
 
 def generate_results(test_list, total_time, sort_type): 
+    """
+    Takes the information from the test functions and builds the results 
+    into a string for readability 
+
+    :param test_list: Python list that is ideally sorted 
+    :param total_time: Time object that is total time of the sort 
+    :param sort_type: String of the done to get the result
+    """
+
     result_str = ""
     if test_list == sorted(test_list): 
         result_str += "Test: Successful\t"
