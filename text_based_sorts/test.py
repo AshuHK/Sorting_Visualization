@@ -2,6 +2,7 @@
 from InsertionSort import insertion_sort
 from SelectionSort import selection_sort
 from BubbleSort import bubble_sort
+from QuickSort import quick_sort
 
 import random
 import time
@@ -77,11 +78,11 @@ def test_quick():
     test_list = [random.randint(0, 1000) for i in range(1000)] 
 
     start_time = time.time()
-    # quick_sort()
+    quick_sort(test_list, 0, len(test_list) - 1)
     final_time = time.time() 
 
     total_time = final_time - start_time 
-    result_str = generate_results(test_list, total_time, "Quick")
+    result_str = generate_results(test_list, total_time, "    Quick")
 
     print(result_str)
 
