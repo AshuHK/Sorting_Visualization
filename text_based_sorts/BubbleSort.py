@@ -10,6 +10,12 @@ def _swap(test_list, x, y):
     test_list[x], test_list[y] = test_list[y], test_list[x]
 
 def bubble_sort(unsorted): 
+    """
+    Does a bubble sort given a Python list 
+    Expected Complexity: O(n^2) (time) and O(1) (space) 
+
+    :param unsorted: unsorted Python list to be sorted 
+    """
     for i in range(len(unsorted)): 
         for j in range(len(unsorted) - 1, i - 1): 
             if unsorted[j] < unsorted[j - 1]: 
