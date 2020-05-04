@@ -31,4 +31,4 @@ def merge_sort(unsorted):
     merge_sort(list1)
     merge_sort(list2)
 
-    merge(list1, list2)
+    merge(list1, list2, unsorted)

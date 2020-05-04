@@ -94,7 +94,7 @@ def test_merge():
     test_list = [random.randint(0, 1000) for i in range(1000)]
 
     start_time = time.time() 
-    # merge_sort()
+    merge_sort(test_list)
     final_time = time.time() 
 
     total_time = final_time - start_time
