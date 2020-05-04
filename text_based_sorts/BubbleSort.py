@@ -17,6 +17,6 @@ def bubble_sort(unsorted):
     :param unsorted: unsorted Python list to be sorted 
     """
     for i in range(len(unsorted)): 
-        for j in range(len(unsorted) - 1, i - 1): 
+        for j in range(len(unsorted) - 1, i, -1): 
             if unsorted[j] < unsorted[j - 1]: 
                 _swap(unsorted, j, j - 1)
