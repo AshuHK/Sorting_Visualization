@@ -4,19 +4,16 @@
 import random as rand
 import time
 
-
-def test_selection():
-    """
-    """
-    pass
-
-
 def test_insertion():
     """
     """
 
     pass
 
+def test_selection():
+    """
+    """
+    pass
 
 def test_bubble():
     """
