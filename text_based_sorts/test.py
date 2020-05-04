@@ -90,8 +90,18 @@ def test_quick():
 
 
 def test_merge():
+    test_list = [random.randint(0, 1000) for i in range(1000)]
 
-    pass
+    start_time = time.time() 
+    # merge_sort()
+    final_time = time.time() 
+
+    total_time = final_time - start_time
+    result_str = generate_results(test_list, total_time, "Merge") 
+
+    print(result_str)
+
+    return None 
 
 
 def main():
