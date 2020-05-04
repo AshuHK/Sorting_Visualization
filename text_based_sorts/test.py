@@ -31,7 +31,8 @@ def generate_results(test_list, total_time, sort_type):
 
 
 def test_insertion(user_int):
-    test_list = [random.randint(0, user_int) for i in range(user_int)]
+    test_list = [i for i in range(user_int)]
+    random.shuffle(test_list)
 
     start_time = time.time()
     insertion_sort(test_list, 0, len(test_list) - 1)
@@ -46,7 +47,8 @@ def test_insertion(user_int):
 
 
 def test_selection(user_int):
-    test_list = [random.randint(0, user_int) for i in range(user_int)]
+    test_list = [i for i in range(user_int)]
+    random.shuffle(test_list)
 
     start_time = time.time()
     selection_sort(test_list)
@@ -61,7 +63,8 @@ def test_selection(user_int):
 
 
 def test_bubble(user_int):
-    test_list = [random.randint(0, user_int) for i in range(user_int)]
+    test_list = [i for i in range(user_int)]
+    random.shuffle(test_list)
 
     start_time = time.time()
     bubble_sort(test_list)
@@ -76,7 +79,8 @@ def test_bubble(user_int):
 
 
 def test_quick(user_int):
-    test_list = [random.randint(0, user_int) for i in range(user_int)]
+    test_list = [i for i in range(user_int)]
+    random.shuffle(test_list)
 
     start_time = time.time()
     quick_sort(test_list, 0, len(test_list) - 1)
@@ -91,7 +95,8 @@ def test_quick(user_int):
 
 
 def test_merge(user_int):
-    test_list = [random.randint(0, user_int) for i in range(user_int)]
+    test_list = [i for i in range(user_int)]
+    random.shuffle(test_list)
 
     start_time = time.time()
     merge_sort(test_list)
@@ -110,26 +115,26 @@ def main():
     try:
         user_int = int(input("\nInput the size of the list to be generated: "))
 
-        if user_int < 0: 
+        if user_int < 0:
             user_int *= -1
+
     except ValueError:
         user_int = 1000
-    
-    for i in range(50): 
-        # just adding an empty line for readability
-        print()
 
-        # test_insertion(user_int)
+    # just adding an empty line for readability
+    print()
 
-        # test_selection(user_int)
+    test_insertion(user_int)
 
-        # test_bubble(user_int)
+    test_selection(user_int)
 
-        test_quick(user_int)
+    test_bubble(user_int)
 
-        # test_merge(user_int)
+    test_quick(user_int)
 
-        print()
+    test_merge(user_int)
+
+    print()
 
     return None
 
