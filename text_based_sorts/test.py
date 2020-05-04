@@ -24,7 +24,7 @@ def generate_results(test_list, total_time, sort_type):
     else:
         result_str += "Test: Fail\t"
 
-    result_str += "{} sort time: {} seconds".format(sort_type, total_time)
+    result_str += "{} sort time: {:5f} seconds".format(sort_type, total_time)
 
     return result_str
 
