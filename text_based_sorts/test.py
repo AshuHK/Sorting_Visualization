@@ -30,7 +30,6 @@ def generate_results(test_list, total_time, sort_type):
 def test_insertion():
     test_list = [random.randint(0, 1000) for i in range(1000)]
 
-    # time tracking of the sort
     start_time = time.time()
     insertion_sort(test_list, 0, len(test_list) - 1)
     final_time = time.time()
@@ -46,7 +45,6 @@ def test_insertion():
 def test_selection():
     test_list = [random.randint(0, 1000) for i in range(1000)]
 
-    # time tracking of the sort
     start_time = time.time()
     selection_sort(test_list)
     final_time = time.time()
@@ -60,11 +58,18 @@ def test_selection():
 
 
 def test_bubble():
-    test_list = [random.randint(0, 1000) for i in range(1000)] 
+    test_list = [random.randint(0, 1000) for i in range(1000)]
 
     start_time = time.time()
+    bubble_sort(test_list)
+    final_time = time.time()
 
+    total_time = final_time - start_time
+    result_str = generate_results(test_list, total_time, "Bubble")
 
+    print(result_str)
+
+    return None
 
 
 def test_merge():
