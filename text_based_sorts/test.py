@@ -5,7 +5,8 @@ from SelectionSort import selection_sort
 import random
 import time
 
-def generate_results(test_list, total_time, sort_type): 
+
+def generate_results(test_list, total_time, sort_type):
     """
     Takes the information from the test functions and builds the results 
     into a string for readability 
@@ -16,14 +17,15 @@ def generate_results(test_list, total_time, sort_type):
     """
 
     result_str = ""
-    if test_list == sorted(test_list): 
+    if test_list == sorted(test_list):
         result_str += "Test: Successful\t"
-    else: 
+    else:
         result_str += "Test: Fail\t"
-    
-    result_str += "{} sort time: {} seconds".format(sort_type, total_time) 
+
+    result_str += "{} sort time: {} seconds".format(sort_type, total_time)
 
     return result_str
+
 
 def test_insertion():
     test_list = [random.randint(0, 1000) for i in range(1000)]
@@ -45,15 +47,15 @@ def test_selection():
     test_list = [random.randint(0, 1000) for i in range(1000)]
     print(test_list)
 
-    # time tracking of the sort 
+    # time tracking of the sort
     start_time = time.time()
-    selection_sort(test_list, 0, len(test_list) - 1) 
+    selection_sort(test_list, 0, len(test_list) - 1)
     final_time = time.time()
 
     total_time = final_time - start_time
     result_str = generate_results(test_list, total_time, "Selection")
 
-    return None 
+    return None
 
 
 def test_bubble():
