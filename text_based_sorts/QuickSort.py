@@ -36,17 +36,18 @@ def partition(unsorted, start, end):
 
     :return: index of where hte pivot value ends in the list
     """
-    pivot_value = find_pivot(unsorted, start, end)
+    pivot_value = find_pivot(unsorted, start, end) 
 
-    i = start - 1
-    for j in range(start, end + 1):
-        if unsorted[j] < pivot_value:
-            i += 1
-            _swap(unsorted, i, j)
+    i = start - 1 
 
-    _swap(unsorted, i + 1, unsorted.index(pivot_value))
+    for j in range(start, end + 1): 
+        if unsorted[j] < pivot_value: 
+            i += 1 
+            _swap(unsorted, i, j) 
+    
+    i += 1 
+    _swap(unsorted, i, unsorted.index(pivot_value)) 
 
-    i += 1
     return i
 
 
