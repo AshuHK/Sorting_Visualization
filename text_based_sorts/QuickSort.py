@@ -52,5 +52,12 @@ def partition(unsorted, start, end):
 
 def quick_sort(unsorted, start, end):
     """
+    Performs a quick sort given a range of indicies to sort 
+    Expected Complexity: O(n*log(n)) (time) and O(log(n)) (space) 
+        - This function has a space complexity of O(log(n)) because of 
+          of the the recursive calls done within this function 
+
+    :param unsorted: an unsorted Python list to be sorted 
+    :param start: integer of the starting index to be sorted 
+    :param end: integer of the ending index to be sorted 
     """
-    pass
