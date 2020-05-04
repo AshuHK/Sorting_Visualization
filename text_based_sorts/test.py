@@ -6,9 +6,6 @@ import time
 
 
 def test_insertion():
-    """
-    Simple test using a random number generator to test insertion sort
-    """
     test_list = [random.randint(0, 1000) for i in range(1000)]
 
     start_time = time.time()
@@ -29,28 +26,21 @@ def test_insertion():
 
 
 def test_selection():
-    """
-    """
+
     pass
 
 
 def test_bubble():
-    """
-    """
 
     pass
 
 
 def test_merge():
-    """
-    """
 
     pass
 
 
 def test_quick():
-    """
-    """
 
     pass
 
