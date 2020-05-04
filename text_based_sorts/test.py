@@ -30,8 +30,8 @@ def generate_results(test_list, total_time, sort_type):
     return result_str
 
 
-def test_insertion():
-    test_list = [random.randint(0, 1000) for i in range(1000)]
+def test_insertion(user_int):
+    test_list = [random.randint(0, user_int) for i in range(user_int)]
 
     start_time = time.time()
     insertion_sort(test_list, 0, len(test_list) - 1)
@@ -45,8 +45,8 @@ def test_insertion():
     return None
 
 
-def test_selection():
-    test_list = [random.randint(0, 1000) for i in range(1000)]
+def test_selection(user_int):
+    test_list = [random.randint(0, user_int) for i in range(user_int)]
 
     start_time = time.time()
     selection_sort(test_list)
@@ -60,8 +60,8 @@ def test_selection():
     return None
 
 
-def test_bubble():
-    test_list = [random.randint(0, 1000) for i in range(1000)]
+def test_bubble(user_int):
+    test_list = [random.randint(0, user_int) for i in range(user_int)]
 
     start_time = time.time()
     bubble_sort(test_list)
@@ -75,8 +75,8 @@ def test_bubble():
     return None
 
 
-def test_quick():
-    test_list = [random.randint(0, 1000) for i in range(1000)]
+def test_quick(user_int):
+    test_list = [random.randint(0, user_int) for i in range(user_int)]
 
     start_time = time.time()
     quick_sort(test_list, 0, len(test_list) - 1)
@@ -90,37 +90,41 @@ def test_quick():
     return None
 
 
-def test_merge():
-    test_list = [random.randint(0, 1000) for i in range(1000)]
+def test_merge(user_int):
+    test_list = [random.randint(0, user_int) for i in range(user_int)]
 
-    start_time = time.time() 
+    start_time = time.time()
     merge_sort(test_list)
-    final_time = time.time() 
+    final_time = time.time()
 
     total_time = final_time - start_time
-    result_str = generate_results(test_list, total_time, "    Merge") 
+    result_str = generate_results(test_list, total_time, "    Merge")
 
     print(result_str)
 
-    return None 
+    return None
 
 
 def main():
 
     # TODO: allow input to test different input sizes
+    try:
+        user_int = int(input("\nInput the size of the list to be generated: "))
+    except ValueError:
+        user_int = 1000
 
     # just adding an empty line for readability
     print()
 
-    test_insertion()
+    test_insertion(user_int)
 
-    test_selection()
+    test_selection(user_int)
 
-    test_bubble()
+    test_bubble(user_int)
 
-    test_quick()
+    test_quick(user_int)
 
-    test_merge()
+    test_merge(user_int)
 
     print()
 
