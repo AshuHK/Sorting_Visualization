@@ -26,48 +26,48 @@ def find_pivot(unsorted, start, end):
 
 def partition(unsorted, start, end):
     """
-    Will partition a list given a certain range for values greater and 
-    less than the pivot to be a certain side 
-    Expected complexity: O(n) (time) and O(1) (space) 
+    Will partition a list given a certain range for values greater and
+    less than the pivot to be a certain side
+    Expected complexity: O(n) (time) and O(1) (space)
 
-    :param unsorted: an unsorted Python list to be partitioned 
-    :param start: integer of starting index within the list 
-    :param end: integer of ending index within the list 
+    :param unsorted: an unsorted Python list to be partitioned
+    :param start: integer of starting index within the list
+    :param end: integer of ending index within the list
 
-    :return: index of where hte pivot value ends in the list 
+    :return: index of where hte pivot value ends in the list
     """
-    pivot_value = find_pivot(unsorted, start, end) 
+    pivot_value = find_pivot(unsorted, start, end)
 
-    i = start - 1 
-    for j in range(start, end + 1): 
-        if unsorted[j] < pivot_value: 
-            i += 1 
-            _swap(unsorted, i, j) 
-    
-    _swap(unsorted, i + 1, unsorted.index(pivot_value)) 
+    i = start - 1
+    for j in range(start, end + 1):
+        if unsorted[j] < pivot_value:
+            i += 1
+            _swap(unsorted, i, j)
 
-    i += 1 
-    return i 
+    _swap(unsorted, i + 1, unsorted.index(pivot_value))
+
+    i += 1
+    return i
 
 
 def quick_sort(unsorted, start, end):
     """
-    Performs a quick sort given a range of indicies to sort 
-    Expected Complexity: O(n*log(n)) (time) and O(log(n)) (space) 
-        - This function has a space complexity of O(log(n)) because of 
-          of the the recursive calls done within this function 
+    Performs a quick sort given a range of indicies to sort
+    Expected Complexity: O(n*log(n)) (time) and O(log(n)) (space)
+        - This function has a space complexity of O(log(n)) because of
+          of the the recursive calls done within this function
 
-    :param unsorted: an unsorted Python list to be sorted 
-    :param start: integer of the starting index to be sorted 
-    :param end: integer of the ending index to be sorted 
+    :param unsorted: an unsorted Python list to be sorted
+    :param start: integer of the starting index to be sorted
+    :param end: integer of the ending index to be sorted
     """
-    if start >= end: 
-        return 
+    if start >= end:
+        return
 
-    pivot_index = partition(unsorted, start, end) 
+    pivot_index = partition(unsorted, start, end)
 
-    # sorting the first half 
-    quick_sort(unsorted, start, pivot_index) 
+    # sorting the first half
+    quick_sort(unsorted, start, pivot_index)
 
-    # sorting the second half 
+    # sorting the second half
     quick_sort(unsorted, pivot_index + 1, end)
