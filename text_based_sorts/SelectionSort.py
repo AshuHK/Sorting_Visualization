@@ -12,7 +12,7 @@ def _swap(test_list, x, y):
 
 def selection_sort(unsorted): 
     """
-    Does an selection sort on a Python list given a range of indicies 
+    Does an selection sort on a Python list 
     Expected Complexity: O(n^2) (time) and O(1) (space)
 
     :param unsorted: unsorted Python list to be sorted  
