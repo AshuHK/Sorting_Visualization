@@ -1,6 +1,3 @@
-from Swap import _swap
-
-
 def merge(list1, list2, unsorted):
     """
     """
