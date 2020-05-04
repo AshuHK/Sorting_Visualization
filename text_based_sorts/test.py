@@ -4,6 +4,16 @@ from InsertionSort import insertion_sort
 import random
 import time
 
+def generate_results(test_list, total_time, sort_type): 
+    result_str = ""
+    if test_list == sorted(test_list): 
+        result_str += "Test: Successful\t"
+    else: 
+        result_str += "Test: Fail\t"
+    
+    result_str += "{} sort time: {} seconds".format(sort_type, total_time) 
+
+    return result_str
 
 def test_insertion():
     test_list = [random.randint(0, 1000) for i in range(1000)]
@@ -13,21 +23,20 @@ def test_insertion():
     insertion_sort(test_list, 0, len(test_list) - 1)
     final_time = time.time()
 
-    # building the results of the sort
-    result_string = ""
-    if test_list == sorted(test_list):
-        result_string += "Test: Successful\t"
-    else:
-        result_string += "Test: Fail\t"
+    result_str = generate_results(test_list, final_time - start_time, "Insertion")
 
-    result_string += "Insertion sort time: {} seconds".format(final_time - start_time)
-
-    print(result_string)
+    print(result_str)
 
     return None
 
 
 def test_selection():
+    test_list = [random.randint(0, 1000) for i in range(1000)]
+
+    # time tracking of the sort 
+    # start_time = time.time()
+    # selection_sort(test_list, 0, len(test_list) - 1) 
+    # final_time = time.time()
 
     pass
 
