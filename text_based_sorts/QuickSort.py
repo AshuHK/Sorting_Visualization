@@ -2,6 +2,14 @@ from Swap import _swap
 
 def find_pivot(unsorted, start, end): 
     """ 
+    Find the pivot value using the Median of Three method in a Python list 
+    Expected Complexity: O(1) (time and space) 
+
+    :param unsorted: an unsorted Python list to find the pivot value in 
+    :param start: starting index to find the pivot value in 
+    :param end: ending index to find the pivot value in 
+
+    :return: the value of the pivot found using the Median of Three method
     """
     first = unsorted[start] 
     middle = unsorted[(start + end) // 2]
