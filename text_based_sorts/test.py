@@ -66,7 +66,7 @@ def test_bubble():
     final_time = time.time()
 
     total_time = final_time - start_time
-    result_str = generate_results(test_list, total_time, "Bubble")
+    result_str = generate_results(test_list, total_time, "   Bubble")
 
     print(result_str)
 
