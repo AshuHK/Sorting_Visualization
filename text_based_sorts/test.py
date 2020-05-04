@@ -110,6 +110,9 @@ def main():
     # TODO: allow input to test different input sizes
     try:
         user_int = int(input("\nInput the size of the list to be generated: "))
+
+        if user_int < 0: 
+            user_int *= -1
     except ValueError:
         user_int = 1000
 
