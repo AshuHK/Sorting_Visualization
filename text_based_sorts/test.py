@@ -8,10 +8,12 @@ import time
 def test_insertion():
     test_list = [random.randint(0, 1000) for i in range(1000)]
 
+    # time tracking of the sort
     start_time = time.time()
     insertion_sort(test_list, 0, len(test_list) - 1)
     final_time = time.time()
 
+    # building the results of the sort
     result_string = ""
     if test_list == sorted(test_list):
         result_string += "Test: Successful\t"
@@ -22,7 +24,7 @@ def test_insertion():
 
     print(result_string)
 
-    pass
+    return None
 
 
 def test_selection():
