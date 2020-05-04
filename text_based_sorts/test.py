@@ -125,13 +125,9 @@ def main():
     print()
 
     test_insertion(user_int)
-
     test_selection(user_int)
-
     test_bubble(user_int)
-
     test_quick(user_int)
-
     test_merge(user_int)
 
     print()
