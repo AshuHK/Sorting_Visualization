@@ -7,8 +7,8 @@ def find_pivot(unsorted, start, end):
     Expected Complexity: O(1) (time and space)
 
     :param unsorted: an unsorted Python list to find the pivot value in
-    :param start: starting index to find the pivot value in
-    :param end: ending index to find the pivot value in
+    :param start: integer of starting index to find the pivot value in
+    :param end: integer of ending index to find the pivot value in
 
     :return: the value of the pivot found using the Median of Three method
     """
@@ -24,10 +24,30 @@ def find_pivot(unsorted, start, end):
         return last
 
 
-def partition():
+def partition(unsorted, start, end):
     """
+    Will partition a list given a certain range for values greater and 
+    less than the pivot to be a certain side 
+    Expected complexity: O(n) (time) and O(1) (space) 
+
+    :param unsorted: an unsorted Python list to be partitioned 
+    :param start: integer of starting index within the list 
+    :param end: integer of ending index within the list 
+
+    :return: index of where hte pivot value ends in the list 
     """
-    pass
+    pivot_value = find_pivot(unsorted, start, end) 
+
+    i = start - 1 
+    for j in range(start, end + 1): 
+        if unsorted[j] < pivot_value: 
+            i += 1 
+            _swap(unsorted, i, j) 
+    
+    _swap(unsorted, i + 1, unsorted.index(pivot_value)) 
+
+    i += 1 
+    return i 
 
 
 def quick_sort(unsorted, start, end):
