@@ -23,7 +23,8 @@ def test_insertion():
     insertion_sort(test_list, 0, len(test_list) - 1)
     final_time = time.time()
 
-    result_str = generate_results(test_list, final_time - start_time, "Insertion")
+    total_time = final_time - start_time
+    result_str = generate_results(test_list, total_time, "Insertion")
 
     print(result_str)
 
@@ -34,11 +35,14 @@ def test_selection():
     test_list = [random.randint(0, 1000) for i in range(1000)]
 
     # time tracking of the sort 
-    # start_time = time.time()
-    # selection_sort(test_list, 0, len(test_list) - 1) 
-    # final_time = time.time()
+    start_time = time.time()
+    selection_sort(test_list, 0, len(test_list) - 1) 
+    final_time = time.time()
 
-    pass
+    total_time = final_time - start_time
+    result_str = generate_results(test_list, total_time, "Selection")
+
+    return None 
 
 
 def test_bubble():
