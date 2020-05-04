@@ -98,7 +98,7 @@ def test_merge():
     final_time = time.time() 
 
     total_time = final_time - start_time
-    result_str = generate_results(test_list, total_time, "Merge") 
+    result_str = generate_results(test_list, total_time, "    Merge") 
 
     print(result_str)
 
