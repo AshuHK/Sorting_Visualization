@@ -8,3 +8,14 @@ def _swap(test_list, x, y):
     """
     test_list[x], test_list[y] = test_list[y], test_list[x]
 
+
+def insertion_sort(unsorted, start, end):
+    """
+    """
+
+    for i in range(1, end + 1):
+        j = i
+
+        while (j > 0) and (unsorted[j] < unsorted[j - 1]):
+            _swap(unsorted, j, j - 1)
+            j -= 1
