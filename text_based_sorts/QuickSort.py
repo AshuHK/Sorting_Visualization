@@ -61,3 +61,13 @@ def quick_sort(unsorted, start, end):
     :param start: integer of the starting index to be sorted 
     :param end: integer of the ending index to be sorted 
     """
+    if start >= end: 
+        return 
+
+    pivot_index = partition(unsorted, start, end) 
+
+    # sorting the first half 
+    quick_sort(unsorted, start, pivot_index) 
+
+    # sorting the second half 
+    quick_sort(unsorted, pivot_index + 1, end)
