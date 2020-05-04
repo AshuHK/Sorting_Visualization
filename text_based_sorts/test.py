@@ -1,5 +1,6 @@
 # import the sorts here
 from InsertionSort import insertion_sort
+from SelectionSort import selection_sort
 
 import random
 import time
@@ -42,6 +43,7 @@ def test_insertion():
 
 def test_selection():
     test_list = [random.randint(0, 1000) for i in range(1000)]
+    print(test_list)
 
     # time tracking of the sort 
     start_time = time.time()
@@ -74,9 +76,9 @@ def main():
     # just adding an empty line for readability
     print()
 
-    test_selection()
-
     test_insertion()
+
+    test_selection()
 
     test_bubble()
 
