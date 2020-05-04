@@ -45,7 +45,6 @@ def test_insertion():
 
 def test_selection():
     test_list = [random.randint(0, 1000) for i in range(1000)]
-    print(test_list)
 
     # time tracking of the sort
     start_time = time.time()
