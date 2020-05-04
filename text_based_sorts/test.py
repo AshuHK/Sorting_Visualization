@@ -107,7 +107,6 @@ def test_merge(user_int):
 
 def main():
 
-    # TODO: allow input to test different input sizes
     try:
         user_int = int(input("\nInput the size of the list to be generated: "))
 
@@ -115,21 +114,22 @@ def main():
             user_int *= -1
     except ValueError:
         user_int = 1000
+    
+    for i in range(50): 
+        # just adding an empty line for readability
+        print()
 
-    # just adding an empty line for readability
-    print()
+        test_insertion(user_int)
 
-    test_insertion(user_int)
+        test_selection(user_int)
 
-    test_selection(user_int)
+        test_bubble(user_int)
 
-    test_bubble(user_int)
+        test_quick(user_int)
 
-    test_quick(user_int)
+        test_merge(user_int)
 
-    test_merge(user_int)
-
-    print()
+        print()
 
     return None
 
