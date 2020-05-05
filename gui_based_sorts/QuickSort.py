@@ -22,12 +22,28 @@ def partition(data_list, start, end, draw_data, time_value):
         if data_list[j] <= pivot_value: 
             i += 1 
             _swap(data_list, i, j) 
-            # set the colors of swapped elements here 
+            
+            color_list = ["red" for x in range(len(data_list))]
+
+            for x in range(len(color_list)): 
+                if (x == i) or (x == j):
+                    color_list[x] = "green"
+            
+            draw_data(data_list, color_list)
+            time.sleep(time_value)
     
     i += 1 
-    _swap(data_list, i, data_list.index(pivot_value))
+    swap_index = data_list.index(pivot_value)
+    _swap(data_list, i, swap_index)
 
-    # set the colors of swapped elements here 
+    color_list = ["red" for x in range(len(data_list))] 
+
+    for x in range(len(color_list)): 
+        if (x == i) or (x == swap_index): 
+            color_list[x] = "green" 
+    
+    draw_data(data_list,color_list)
+    time.sleep(time_value)
 
     return i 
 
