@@ -20,7 +20,10 @@ canvas.grid(row=1, column=0, padx=10, pady=5)
 # building the UI 
 Label(ui_frame, text="Algorithm: ", bg="grey").grid(row=0,column=0, padx=5, pady=5, sticky="w")
 
-algorithm_menu = ttk.Combobox(ui_frame, textvariable=selected_algorithm, values=["Bubble sort", "Selection Sort", "Insertion sort"])
+# drop down menu to pick the algorithm
+algorithm_menu = ttk.Combobox(ui_frame, textvariable=selected_algorithm, values=["Bubble sort", "Selection Sort", "Insertion sort", "Merge Sort", "Quick Sort"])
 algorithm_menu.grid(row=0, column=1, padx=5, pady=5)
+
+algorithm_menu.current(0)
 
 root.mainloop()
