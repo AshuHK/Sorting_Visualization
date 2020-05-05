@@ -4,6 +4,7 @@ from tkinter import ttk
 from BubbleSort import bubble_sort
 from SelectionSort import selection_sort
 from InsertionSort import insertion_sort
+from QuickSort import quick_sort
 
 import random
 
