@@ -48,6 +48,9 @@ def generate():
     except ValueError: 
         size_value = 30 
 
+    # Set a limit on the sizes that could be used
+    if (size_value > 30) or (size_value < 3): 
+        size_value = 15
 
     # create the list of random data 
     data_list = [i for i in range(size_value)]
