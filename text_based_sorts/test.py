@@ -112,6 +112,14 @@ def test_merge(user_int):
 
 def main():
 
+    warning_str = """ 
+    The first 3 sorts in this program (insertion, selection, and bubble) 
+    will take a significant amount of time if you input something greater 
+    than 20,000.  
+                  """ 
+ 
+    print(warning_str)
+
     try:
         user_int = int(input("\nInput the size of the list to be generated: "))
 
