@@ -76,6 +76,9 @@ def start_algorithm():
         selection_sort(data_list, draw_data, speed_scale.get())
     elif algorithm_menu.get() == "Insertion Sort": 
         insertion_sort(data_list, draw_data, speed_scale.get())
+    elif algorithm_menu.get() == "Quick Sort": 
+        # quick_sort()
+        pass
 
 
 # seperating the layouts
