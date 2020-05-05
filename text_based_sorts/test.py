@@ -113,7 +113,7 @@ def test_merge(user_int):
 def main():
 
     warning_str = """
-    The first 3 sorts in this program (insertion, selection, and bubble)
+    The first 3 sorts in this program (bubble, insertion, and selection)
     will take a significant amount of time if you input something greater
     than 20,000.
                   """
