@@ -13,7 +13,7 @@ root.config(bg="black")
 selected_algorithm = StringVar()
 data_list = [] 
 
-def draw_data(data_list):
+def draw_data(data_list, color_list):
     
     # removes any previous data that was on the canvas 
     canvas.delete("all")
@@ -38,7 +38,7 @@ def draw_data(data_list):
         y1 = canvas_height
 
         # draws the rectangles
-        canvas.create_rectangle(x0, y0, x1, y1, fill="red")
+        canvas.create_rectangle(x0, y0, x1, y1, fill=color_list[i])
         canvas.create_text(x0 + 2, y0, anchor="sw", text=str(data_list[i]))
 
     root.update()
@@ -61,7 +61,7 @@ def generate():
     data_list = [i for i in range(1, size_value + 1)]
     random.shuffle(data_list)
 
-    draw_data(data_list)
+    draw_data(data_list, ["red" for x in range(len(data_list))])
 
 def start_algorithm(): 
     global data_list 
