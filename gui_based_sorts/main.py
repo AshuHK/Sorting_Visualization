@@ -5,6 +5,7 @@ from BubbleSort import bubble_sort
 from SelectionSort import selection_sort
 from InsertionSort import insertion_sort
 from QuickSort import quick_sort
+from MergeSort import merge_sort
 
 import random
 
@@ -79,6 +80,9 @@ def start_algorithm():
         insertion_sort(data_list, draw_data, speed_scale.get())
     elif algorithm_menu.get() == "Quick Sort": 
         quick_sort(data_list, 0, len(data_list) - 1, draw_data, speed_scale.get())
+    elif algorithm_menu.get() == "Merge Sort": 
+        # merge_sort()
+        pass
 
 # seperating the layouts
 ui_frame = Frame(root, width=600, height=200, bg="grey")
