@@ -30,6 +30,22 @@ def generate_results(test_list, total_time, sort_type):
     return result_str
 
 
+def test_bubble(user_int):
+    test_list = [i for i in range(user_int)]
+    random.shuffle(test_list)
+
+    start_time = time.time()
+    bubble_sort(test_list)
+    final_time = time.time()
+
+    total_time = final_time - start_time
+    result_str = generate_results(test_list, total_time, "   Bubble")
+
+    print(result_str)
+
+    return None
+
+
 def test_insertion(user_int):
     test_list = [i for i in range(user_int)]
     random.shuffle(test_list)
@@ -56,22 +72,6 @@ def test_selection(user_int):
 
     total_time = final_time - start_time
     result_str = generate_results(test_list, total_time, "Selection")
-
-    print(result_str)
-
-    return None
-
-
-def test_bubble(user_int):
-    test_list = [i for i in range(user_int)]
-    random.shuffle(test_list)
-
-    start_time = time.time()
-    bubble_sort(test_list)
-    final_time = time.time()
-
-    total_time = final_time - start_time
-    result_str = generate_results(test_list, total_time, "   Bubble")
 
     print(result_str)
 
@@ -112,12 +112,12 @@ def test_merge(user_int):
 
 def main():
 
-    warning_str = """ 
-    The first 3 sorts in this program (insertion, selection, and bubble) 
-    will take a significant amount of time if you input something greater 
-    than 20,000.  
-                  """ 
- 
+    warning_str = """
+    The first 3 sorts in this program (insertion, selection, and bubble)
+    will take a significant amount of time if you input something greater
+    than 20,000.
+                  """
+
     print(warning_str)
 
     try:
@@ -132,9 +132,9 @@ def main():
     # just adding an empty line for readability
     print()
 
+    test_bubble(user_int)
     test_insertion(user_int)
     test_selection(user_int)
-    test_bubble(user_int)
     test_quick(user_int)
     test_merge(user_int)
 
