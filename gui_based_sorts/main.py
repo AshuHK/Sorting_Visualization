@@ -17,11 +17,13 @@ def draw_data(data_list):
 
     offset = 30
     spacing = 10 
-    for i, height in enumerate(data_list): 
+
+    normalized_data = [i / max(data_list) for i in data_list]
+    for i, height in enumerate(normalized_data): 
 
         # top left 
         x0 = i * x_width + offset + spacing
-        y0 = canvas_height - height
+        y0 = canvas_height - height * 340
         
         # bottom right 
         x1 = (i + 1) * x_width + offset
@@ -33,7 +35,7 @@ def draw_data(data_list):
 def generate(): 
     print("Algorithm Selected: {}".format(selected_algorithm.get()))
 
-    data_list = [1, 2, 3, 4, 5, 100]
+    data_list = [1, 2, 3, 4, 5]
     draw_data(data_list)
 
 # seperating the layouts 
