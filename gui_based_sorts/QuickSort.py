@@ -13,8 +13,23 @@ def find_pivot(data_list, start, end):
     elif (first <= last <= middle) or (middle <= last <= first): 
         return last 
 
-def partition(): 
-    pass
+def partition(data_list, start, end, draw_data, time_value):
+    pivot_value = find_pivot(data_list, start, end) 
+
+    i = start - 1 
+
+    for j in range(start, end + 1): 
+        if data_list[j] <= pivot_value: 
+            i += 1 
+            _swap(data_list, i, j) 
+            # set the colors of swapped elements here 
+    
+    i += 1 
+    _swap(data_list, i, data_list.index(pivot_value))
+
+    # set the colors of swapped elements here 
+
+    return i 
 
 def quick_sort(data_list, start, end, draw_data, time_value): 
     if start >= end: 
