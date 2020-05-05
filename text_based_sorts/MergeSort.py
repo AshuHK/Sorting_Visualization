@@ -1,5 +1,12 @@
 def merge(list1, list2, unsorted):
     """
+    Merges two Python lists into the original list
+    Expected Complexity: O(n) (time and space)
+
+    :param list1: Python list of values to be used in the merge
+    :param list2: Python list of values to be used in the merge
+    :param unsorted: unsorted Python list of values where the values from list1
+                     and list2 will be placed into
     """
     i = 0
     j = 0
@@ -11,11 +18,14 @@ def merge(list1, list2, unsorted):
         else:
             unsorted[i + j] = list2[j]
             j += 1
-    pass
 
 
 def merge_sort(unsorted):
     """
+    Does a merge sort on an unsorted Python list
+    Expected Complexity: O(n*log(n)) (time) and O(n) (space)
+
+    :param unsorted: unsorted Python list of values to be sorted
     """
     if len(unsorted) < 2:
         return
