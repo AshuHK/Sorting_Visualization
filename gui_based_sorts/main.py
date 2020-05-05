@@ -107,7 +107,7 @@ algorithm_menu.current(0)
 # making a speed scale
 speed_scale = Scale(ui_frame, from_=0.1, to=2.0, length=200, digits=2, resolution=0.2, orient=HORIZONTAL, label="Select Speed(sec)")
 speed_scale.grid(row=0, column=2, padx=5, pady=5) 
-Button(ui_frame, text="start", command=start_algorithm, bg='red').grid(row=0, column=2, padx=5, pady=5) 
+Button(ui_frame, text="start", command=start_algorithm, bg='red').grid(row=0, column=3, padx=5, pady=5) 
 
 # size input
 Label(ui_frame, text="Size: ", bg="grey").grid(
