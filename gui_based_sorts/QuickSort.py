@@ -19,7 +19,7 @@ def partition(data_list, start, end, draw_data, time_value):
     i = start - 1 
 
     for j in range(start, end + 1): 
-        if data_list[j] <= pivot_value: 
+        if data_list[j] < pivot_value: 
             i += 1 
             _swap(data_list, i, j) 
             
@@ -58,3 +58,5 @@ def quick_sort(data_list, start, end, draw_data, time_value):
 
     # sorting the second half of the data 
     quick_sort(data_list, pivot_index + 1, end, draw_data, time_value)
+
+    draw_data(data_list, ["green" for i in range(len(data_list))])
