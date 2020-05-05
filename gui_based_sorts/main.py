@@ -12,13 +12,18 @@ selected_algorithm = StringVar()
 
 
 def draw_data(data_list):
+    
+    # removes any previous data that was on the canvas 
+    canvas.delete("all")
+
+    # set up the basic parameters for drawing the data 
     canvas_height = 380
     canvas_width = 600
     x_width = canvas_width / (len(data_list) + 1)
-
     offset = 10
     spacing = 10
 
+    # create a normalized size so it fills screen better 
     normalized_data = [i / max(data_list) for i in data_list]
     for i, height in enumerate(normalized_data):
 
@@ -37,10 +42,17 @@ def draw_data(data_list):
 def generate():
     print("Algorithm Selected: {}".format(selected_algorithm.get()))
 
-    size_value = int(size_entry.get())
+    try: 
+        # pull the size from the user 
+        size_value = int(size_entry.get())
+    except ValueError: 
+        size_value = 30 
 
+
+    # create the list of random data 
     data_list = [i for i in range(size_value)]
     random.shuffle(data_list)
+
     draw_data(data_list)
 
 
