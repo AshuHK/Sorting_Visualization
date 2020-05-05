@@ -3,6 +3,7 @@ from tkinter import ttk
 
 from BubbleSort import bubble_sort
 from SelectionSort import selection_sort
+from InsertionSort import insertion_sort
 
 import random
 
@@ -73,6 +74,8 @@ def start_algorithm():
         bubble_sort(data_list, draw_data, speed_scale.get())
     elif algorithm_menu.get() == "Selection Sort":
         selection_sort(data_list, draw_data, speed_scale.get())
+    elif algorithm_menu.get() == "Insertion Sort": 
+        insertion_sort(data_list, draw_data, speed_scale.get())
 
 
 # seperating the layouts
