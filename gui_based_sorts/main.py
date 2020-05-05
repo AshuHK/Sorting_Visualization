@@ -16,18 +16,18 @@ def draw_data(data_list):
     canvas_width = 600
     x_width = canvas_width / (len(data_list) + 1)
 
-    offset = 20
+    offset = 10
     spacing = 10
 
     normalized_data = [i / max(data_list) for i in data_list]
     for i, height in enumerate(normalized_data):
 
         # top left
-        x0 = i * x_width + offset + spacing
-        y0 = canvas_height - height * 340
+        x0 = (i * x_width) + offset + spacing
+        y0 = canvas_height - (height * 340)
 
         # bottom right
-        x1 = (i + 1) * x_width + offset
+        x1 = ((i + 1) * x_width) + offset
         y1 = canvas_height
 
         canvas.create_rectangle(x0, y0, x1, y1, fill="red")
