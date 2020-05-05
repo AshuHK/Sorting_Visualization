@@ -16,7 +16,7 @@ def draw_data(data_list):
     canvas_width = 600
     x_width = canvas_width / (len(data_list) + 1)
 
-    offset = 30
+    offset = 20
     spacing = 10
 
     normalized_data = [i / max(data_list) for i in data_list]
@@ -37,14 +37,10 @@ def draw_data(data_list):
 def generate():
     print("Algorithm Selected: {}".format(selected_algorithm.get()))
 
-    min_value = int(min_entry.get())
-    max_value = int(max_entry.get())
     size_value = int(size_entry.get())
 
-    data_list = []
-    for i in range(size):
-        data_list.append(random.randint(min_value, max_value + 1))
-
+    data_list = [i for i in range(size_value)]
+    random.shuffle(data_list)
     draw_data(data_list)
 
 
@@ -88,17 +84,5 @@ Label(ui_frame, text="Size: ", bg="grey").grid(
 )
 size_entry = Entry(ui_frame)
 size_entry.grid(row=1, column=1, padx=5, pady=5, sticky="w")
-
-Label(ui_frame, text="Min value: ", bg="grey").grid(
-    row=1, column=2, padx=5, pady=5, sticky="w"
-)
-min_entry = Entry(ui_frame)
-min_entry.grid(row=1, column=3, padx=5, pady=5, sticky="w")
-
-Label(ui_frame, text="Max value: ", bg="grey").grid(
-    row=1, column=4, padx=5, pady=5, sticky="w"
-)
-max_entry = Entry(ui_frame)
-max_entry.grid(row=1, column=5, padx=5, pady=5, sticky="w")
 
 root.mainloop()
