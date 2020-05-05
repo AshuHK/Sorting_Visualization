@@ -41,7 +41,7 @@ def draw_data(data_list):
         canvas.create_rectangle(x0, y0, x1, y1, fill="red")
         canvas.create_text(x0 + 2, y0, anchor="sw", text=str(data_list[i]))
 
-    root.update_idletasks()
+    root.update()
 
 
 def generate():
