@@ -18,4 +18,4 @@ def insertion_sort(data_list, draw_data, time_value):
             draw_data(data_list, color_list) 
             time.sleep(time_value) 
     
-    draw_data(draw_list, ["green" for i in range(len(data_list))])
+    draw_data(data_list, ["green" for i in range(len(data_list))])
