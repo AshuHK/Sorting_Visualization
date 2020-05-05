@@ -1,6 +1,9 @@
 from tkinter import *
 from tkinter import ttk
+
 from BubbleSort import bubble_sort
+from SelectionSort import selection_sort
+
 import random
 
 # build the window base
@@ -68,6 +71,8 @@ def start_algorithm():
     
     if algorithm_menu.get() == "Bubble Sort": 
         bubble_sort(data_list, draw_data, speed_scale.get())
+    elif algorithm_menu.get == "Selection Sort" 
+        selection_sort(data_list, draw_data, speed_scale.get())
 
 
 # seperating the layouts
