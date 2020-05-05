@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk
+from BubbleSort import bubble_sort
 import random
 
 # build the window base
