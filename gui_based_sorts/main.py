@@ -98,8 +98,8 @@ algorithm_menu = ttk.Combobox(
         "Bubble Sort",
         "Selection Sort",
         "Insertion Sort",
-        "Merge Sort",
         "Quick Sort",
+        "Merge Sort",
     ],
 )
 algorithm_menu.grid(row=0, column=1, padx=5, pady=5)
