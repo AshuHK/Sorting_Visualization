@@ -64,6 +64,8 @@ def generate():
 def start_algorithm(): 
     global data_list 
     
+    if algorithm_menu.get() == "Bubble Sort": 
+        bubble_sort(data_list, draw_data)
 
 
 # seperating the layouts
@@ -83,7 +85,7 @@ algorithm_menu = ttk.Combobox(
     ui_frame,
     textvariable=selected_algorithm,
     values=[
-        "Bubble sort",
+        "Bubble Sort",
         "Selection Sort",
         "Insertion sort",
         "Merge Sort",
