@@ -97,7 +97,7 @@ algorithm_menu = ttk.Combobox(
     values=[
         "Bubble Sort",
         "Selection Sort",
-        "Insertion sort",
+        "Insertion Sort",
         "Merge Sort",
         "Quick Sort",
     ],
