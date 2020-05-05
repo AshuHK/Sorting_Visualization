@@ -58,7 +58,7 @@ def generate():
         size_value = 30
 
     # create the list of random data 
-    data_list = [i for i in range(size_value)]
+    data_list = [i for i in range(1, size_value + 1)]
     random.shuffle(data_list)
 
     draw_data(data_list)
