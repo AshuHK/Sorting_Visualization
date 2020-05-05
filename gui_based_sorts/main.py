@@ -71,7 +71,7 @@ def start_algorithm():
     
     if algorithm_menu.get() == "Bubble Sort": 
         bubble_sort(data_list, draw_data, speed_scale.get())
-    elif algorithm_menu.get == "Selection Sort" 
+    elif algorithm_menu.get() == "Selection Sort":
         selection_sort(data_list, draw_data, speed_scale.get())
 
 
