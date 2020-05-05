@@ -8,8 +8,9 @@ root.title("Sorting Algorithm Visualization")
 root.maxsize(900, 600)
 root.config(bg="black")
 
+# Global variables 
 selected_algorithm = StringVar()
-
+data_list = [] 
 
 def draw_data(data_list):
     
@@ -41,7 +42,7 @@ def draw_data(data_list):
 
 
 def generate():
-    print("Algorithm Selected: {}".format(selected_algorithm.get()))
+    global data_list
 
     try: 
         # pull the size from the user 
@@ -60,7 +61,8 @@ def generate():
     draw_data(data_list)
 
 def start_algorithm(): 
-    print("Starting algorithm")
+    global data_list 
+    
 
 
 # seperating the layouts
