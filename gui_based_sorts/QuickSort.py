@@ -7,5 +7,5 @@ def find_pivot():
 def partition(): 
     pass
 
-def quick_sort(): 
+def quick_sort(data_list, start, end, draw_data, time_value): 
     pass
