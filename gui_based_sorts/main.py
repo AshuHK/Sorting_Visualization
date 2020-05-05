@@ -67,7 +67,7 @@ def start_algorithm():
     global data_list 
     
     if algorithm_menu.get() == "Bubble Sort": 
-        bubble_sort(data_list, draw_data)
+        bubble_sort(data_list, draw_data, speed_scale.get())
 
 
 # seperating the layouts
