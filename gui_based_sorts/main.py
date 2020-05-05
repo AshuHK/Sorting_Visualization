@@ -59,6 +59,9 @@ def generate():
 
     draw_data(data_list)
 
+def start_algorithm(): 
+    print("Starting algorithm")
+
 
 # seperating the layouts
 ui_frame = Frame(root, width=600, height=200, bg="grey")
@@ -89,10 +92,10 @@ algorithm_menu.grid(row=0, column=1, padx=5, pady=5)
 # set the default algorithm to be the first one in the list
 algorithm_menu.current(0)
 
-# need to figure out how to change the background color
-Button(ui_frame, text="Generate", command=generate, bg="white").grid(
-    row=0, column=2, padx=5, pady=5
-)
+# making a speed scale
+speed_scale = Scale(ui_frame, from_=0.1, to=2.0, length=200, digits=2, resolution=0.2, orient=HORIZONTAL, label="Select Speed(sec)")
+speed_scale.grid(row=0, column=2, padx=5, pady=5) 
+Button(ui_frame, text="start", command=start_algorithm, bg='red').grid(row=0, column=2, padx=5, pady=5) 
 
 # size input
 Label(ui_frame, text="Size: ", bg="grey").grid(
@@ -100,5 +103,10 @@ Label(ui_frame, text="Size: ", bg="grey").grid(
 )
 size_entry = Entry(ui_frame)
 size_entry.grid(row=1, column=1, padx=5, pady=5, sticky="w")
+
+# need to figure out how to change the background color
+Button(ui_frame, text="Generate", command=generate, bg="white").grid(
+    row=1, column=2, padx=5, pady=5
+)
 
 root.mainloop()
