@@ -35,7 +35,12 @@ def draw_data(data_list):
 def generate(): 
     print("Algorithm Selected: {}".format(selected_algorithm.get()))
 
-    data_list = [1, 2, 3, 4, 5]
+    min_value = int(min_entry.get())
+    max_value = int(max_entry.get())
+    size_value = int(size_entry.get())
+
+    data_list = [] 
+
     draw_data(data_list)
 
 # seperating the layouts 
