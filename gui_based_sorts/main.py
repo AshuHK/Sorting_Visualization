@@ -81,8 +81,7 @@ def start_algorithm():
     elif algorithm_menu.get() == "Quick Sort": 
         quick_sort(data_list, 0, len(data_list) - 1, draw_data, speed_scale.get())
     elif algorithm_menu.get() == "Merge Sort": 
-        # merge_sort()
-        pass
+        merge_sort(data_list, draw_data, speed_scale.get())
 
 # seperating the layouts
 ui_frame = Frame(root, width=600, height=200, bg="grey")

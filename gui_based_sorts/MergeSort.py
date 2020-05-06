@@ -28,7 +28,7 @@ def merge(list1, list2, data_list, draw_data, time_value):
                     color_list[x] = "green" 
             
             draw_data(data_list, color_list) 
-            time.sleep(time_value) update colors here too
+            time.sleep(time_value)
 
 
 def merge_sort(data_list, draw_data, time_value):
@@ -44,3 +44,5 @@ def merge_sort(data_list, draw_data, time_value):
     merge_sort(list2)
 
     merge(list1, list2, data_list, draw_data, time_value)
+
+    draw_data(data_list, ["green" for i in range(len(data_list))])
