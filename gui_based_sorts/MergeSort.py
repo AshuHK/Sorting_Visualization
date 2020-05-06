@@ -5,7 +5,7 @@ def merge(data_list, start, middle, end, draw_data, time_value):
     time.sleep(time_value)
 
     start_list = data_list[start:middle + 1] 
-    end_list = data_list[middle + 1:end + 1 ]
+    end_list = data_list[middle + 1:end + 1]
 
     left_index = 0 
     right_index = 0 
@@ -17,6 +17,7 @@ def merge(data_list, start, middle, end, draw_data, time_value):
                 left_index += 1 
             else: 
                 data_list[i] = end_list[right_index] 
+                right_index += 1 
         
         elif left_index < len(start_list): 
             data_list[i] = start_list[left_index]
