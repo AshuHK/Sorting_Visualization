@@ -128,17 +128,16 @@ def main():
 
     except ValueError:
         user_int = 1000
-
-    # just adding an empty line for readability
-    print()
-
+    
+    print("\n")
+    
     test_bubble(user_int)
     test_insertion(user_int)
     test_selection(user_int)
     test_quick(user_int)
     test_merge(user_int)
 
-    print()
+    print("\n")
 
     return None
 
