@@ -2,6 +2,8 @@ import time
 
 def merge(data_list, start, middle, end, draw_data, time_value): 
     # update color here 
+    draw_data(data_list, get_color_list(len(data_list), start, middle, right))
+    time.sleep(time_value)
 
     start_list = data_list[start:middle + 1] 
     end_list = data_list[middle + 1:right + 1 ]
