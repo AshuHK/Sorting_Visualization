@@ -119,7 +119,7 @@ algorithm_menu.grid(row=0, column=1, padx=5, pady=5)
 # set the default algorithm to be the first one in the list
 algorithm_menu.current(0)
 
-# making a speed scale
+# speed scale for how fast each operation should take to visualize
 speed_scale = Scale(
     ui_frame,
     from_=0.2,
@@ -142,7 +142,7 @@ Label(ui_frame, text="Size: ", bg="grey").grid(
 size_entry = Entry(ui_frame)
 size_entry.grid(row=1, column=1, padx=5, pady=5, sticky="w")
 
-# need to figure out how to change the background color
+# button for generating the data set 
 Button(ui_frame, text="Generate", command=generate, bg="white").grid(
     row=1, column=2, padx=5, pady=5
 )
