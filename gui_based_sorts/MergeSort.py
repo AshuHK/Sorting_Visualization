@@ -9,12 +9,26 @@ def merge(list1, list2, data_list, draw_data, time_value):
             data_list[i + j] = list1[i]
             i += 1
 
-            # update colors here
+            color_list = ["red" for x in range(len(data_list))]
+
+            for x in range(len(color_list)): 
+                if (x == (i + j)) or (x == i): 
+                    color_list[x] = "green" 
+            
+            draw_data(data_list, color_list) 
+            time.sleep(time_value)
         else:
             data_list[i + j] = list2[j]
             j += 1
 
-            # update colors here too
+            color_list = ["red" for x in range(len(data_list))]
+
+            for x in range(len(color_list)): 
+                if (x == (i + j)) or (x == j): 
+                    color_list[x] = "green" 
+            
+            draw_data(data_list, color_list) 
+            time.sleep(time_value) update colors here too
 
 
 def merge_sort(data_list, draw_data, time_value):
