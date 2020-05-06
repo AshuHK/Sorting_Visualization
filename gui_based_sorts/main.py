@@ -122,7 +122,7 @@ algorithm_menu.current(0)
 # making a speed scale
 speed_scale = Scale(
     ui_frame,
-    from_=0.1,
+    from_=0.2,
     to=2.0,
     length=200,
     digits=2,
