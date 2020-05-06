@@ -56,9 +56,9 @@ def get_color_list(length, start, middle, end):
     for i in range(length): 
         if (i >= start) and (i <= end): 
             if (i >= start) and (i <= middle): 
-                color_list.append("yellow")
+                color_list.append("blue")
             else: 
-                color_list.append("pink") 
+                color_list.append("orange") 
         else: 
             color_list.append("red")
 
