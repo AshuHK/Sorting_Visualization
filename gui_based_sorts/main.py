@@ -74,12 +74,16 @@ def start_algorithm():
     
     if algorithm_menu.get() == "Bubble Sort": 
         bubble_sort(data_list, draw_data, speed_scale.get())
+
     elif algorithm_menu.get() == "Selection Sort":
         selection_sort(data_list, draw_data, speed_scale.get())
+
     elif algorithm_menu.get() == "Insertion Sort": 
         insertion_sort(data_list, draw_data, speed_scale.get())
+
     elif algorithm_menu.get() == "Quick Sort": 
         quick_sort(data_list, 0, len(data_list) - 1, draw_data, speed_scale.get())
+        
     elif algorithm_menu.get() == "Merge Sort": 
         merge_sort(data_list, draw_data, speed_scale.get())
 
