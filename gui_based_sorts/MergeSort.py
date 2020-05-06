@@ -1,7 +1,30 @@
 import time 
 
-def merge(data, start, end, draw_data, time_value): 
+def merge(data_list, start, middle, end, draw_data, time_value): 
+    # update color here 
 
+    start_list = data_list[start:middle + 1] 
+    end_list = data_list[middle + 1:right + 1 ]
+
+    left_index = 0 
+    right_index = 0 
+
+    for i in range(left, right + 1): 
+        if left_index < len(start_list) and right_index < len(end_list): 
+            if start_list[left_index] <= end_list[right_index]: 
+                data_list[i] = start_list[left_index]
+                left_index += 1 
+            else: 
+                data_list[i] = end_list[right_index] 
+        
+        elif left_index < len(start_list): 
+            data_list[i] = start_list[left_index]
+            left_index += 1 
+        else: 
+            data_list[i] = end_list[right_index]
+            right_index += 1 
+
+    # update colors here too 
     pass
 
 def merge_sort(data_list, start, end, draw_data, time_value): 
