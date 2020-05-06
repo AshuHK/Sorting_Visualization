@@ -1,16 +1,16 @@
 import time 
 
 def merge(data_list, start, middle, end, draw_data, time_value): 
-    draw_data(data_list, get_color_list(len(data_list), start, middle, right))
+    draw_data(data_list, get_color_list(len(data_list), start, middle, end))
     time.sleep(time_value)
 
     start_list = data_list[start:middle + 1] 
-    end_list = data_list[middle + 1:right + 1 ]
+    end_list = data_list[middle + 1:end + 1 ]
 
     left_index = 0 
     right_index = 0 
 
-    for i in range(left, right + 1): 
+    for i in range(start, end + 1): 
         if left_index < len(start_list) and right_index < len(end_list): 
             if start_list[left_index] <= end_list[right_index]: 
                 data_list[i] = start_list[left_index]
@@ -28,14 +28,14 @@ def merge(data_list, start, middle, end, draw_data, time_value):
     color_list = ["red" for i in range(len(data_list))]
 
     for i in range(len(color_list)): 
-        if (x >= left) and (x <= right): 
+        if (i >= start) and (i <= end): 
             color_list[i] = "green"
     
     draw_data(data_list, color_list)
 
 
 def merge_sort(data_list, start, end, draw_data, time_value): 
-    if start > end: 
+    if start >= end: 
         return 
 
     middle_index = (start + end) // 2 
@@ -53,8 +53,8 @@ def get_color_list(length, start, middle, end):
     color_list = [] 
 
     for i in range(length): 
-        if (i >= left) and (i <= right): 
-            if (i >= left) and (i <= middle): 
+        if (i >= start) and (i <= end): 
+            if (i >= start) and (i <= middle): 
                 color_list.append("yellow")
             else: 
                 color_list.append("pink") 
