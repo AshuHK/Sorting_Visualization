@@ -50,4 +50,15 @@ def merge_sort(data_list, start, end, draw_data, time_value):
 
 
 def get_color_list(length, start, middle, end): 
-    pass
+    color_list = [] 
+
+    for i in range(length): 
+        if (i >= left) and (i <= right): 
+            if (i >= left) and (i <= middle): 
+                color_list.append("yellow")
+            else: 
+                color_list.append("pink") 
+        else: 
+            color_list.append("red")
+
+    return color_list 
