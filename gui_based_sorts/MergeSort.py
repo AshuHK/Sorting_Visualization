@@ -40,8 +40,8 @@ def merge_sort(data_list, draw_data, time_value):
     list1 = data_list[0:middle_index] 
     list2 = data_list[middle_index:len(data_list)]
 
-    merge_sort(list1) 
-    merge_sort(list2)
+    merge_sort(list1, draw_data, time_value) 
+    merge_sort(list2, draw_data, time_value)
 
     merge(list1, list2, data_list, draw_data, time_value)
 
