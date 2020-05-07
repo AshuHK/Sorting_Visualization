@@ -91,7 +91,7 @@ def start_algorithm():
         merge_sort(data_list, 0, len(data_list) - 1, draw_data, speed_scale.get())
     
     elif algorithm_menu.get() == "Heap Sort": 
-        heap_sort(data_list, 0, len(data_list) - 1, draw_data, speed_scale.get())
+        heap_sort(data_list, draw_data, speed_scale.get())
 
 
 # seperating the layouts
