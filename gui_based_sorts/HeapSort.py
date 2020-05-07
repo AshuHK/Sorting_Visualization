@@ -4,8 +4,8 @@ from Swap import _swap
 
 def heapify(data_list, size, root_index, draw_data, time_value):
     largest_index = root_index
-    left_child = (2 * root_index) + 2
-    right_child = (2 * root_index) + 1
+    left_child = (2 * root_index) + 1
+    right_child = (2 * root_index) + 2
 
     if (left_child < size) and (data_list[root_index] < data_list[left_child]):
         largest_index = left_child
@@ -19,8 +19,6 @@ def heapify(data_list, size, root_index, draw_data, time_value):
         # heapify the root
         heapify(data_list, size, largest_index, draw_data, time_value)
 
-    pass
-
 
 def heap_sort(data_list, start, end, draw_data, time_value):
 
@@ -28,9 +26,11 @@ def heap_sort(data_list, start, end, draw_data, time_value):
     for i in range((len(data_list) // 2) - 1, -1, -1):
         heapify(data_list, len(data_list), i, draw_data, time_value)
 
+    draw_data(data_list, ["blue" for i in range(len(data_list))])
+
     # does the sorting by extracting the roots
-    for i in range(len(data_list) - 1, -1, -1):
+    for i in range(len(data_list) - 1, 0, -1):
         _swap(data_list, 0, i)
         heapify(data_list, i, 0, draw_data, time_value)
 
-    draw_data(data_list, ["green" for i in range(len(data_list))])
+    # draw_data(data_list, ["green" for i in range(len(data_list))])
