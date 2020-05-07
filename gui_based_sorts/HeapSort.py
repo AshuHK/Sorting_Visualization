@@ -1,7 +1,23 @@
 import time 
 from Swap import _swap
 
-def heapify(data_list, size, start, draw_data, time_value): 
+def heapify(data_list, size, root_index, draw_data, time_value): 
+    largest_index = root 
+    left_child = (2 * root_index) + 2 
+    right_child = (2 * root_index) + 1 
+
+    if (left_child < size) and (data_list[root_index] < data_list[left_child]):
+        largest_index = left_child
+    
+    if (right_child < size) and (data_list[root_index] < data_list[right_child]):
+        largest_index = right_child
+    
+    if largest_index != root_index:
+        _swap(data_list, root_index, largest_index)
+
+        # heapify the root 
+        heapify(data_list, size, largest_index, draw_data, time_value) 
+
     pass
 
 def heap_sort(data_list, start, end, draw_data, time_value): 
