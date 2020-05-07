@@ -2,7 +2,7 @@ import time
 from Swap import _swap
 
 def heapify(data_list, size, root_index, draw_data, time_value): 
-    largest_index = root 
+    largest_index = root_index
     left_child = (2 * root_index) + 2 
     right_child = (2 * root_index) + 1 
 
@@ -27,7 +27,7 @@ def heap_sort(data_list, start, end, draw_data, time_value):
         heapify(data_list, len(data_list), i, draw_data, time_value)
     
     # does the sorting by extracting the roots 
-    for i in range(len(data_list), 0, -1): 
+    for i in range(len(data_list)-1, -1, -1): 
         _swap(data_list, 0, i) 
         heapify(data_list, i, 0, draw_data, time_value) 
 
