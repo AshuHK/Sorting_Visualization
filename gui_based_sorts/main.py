@@ -7,6 +7,7 @@ from InsertionSort import insertion_sort
 from QuickSort import quick_sort
 from MergeSort import merge_sort
 from HeapSort import heap_sort
+from CocktailSort import cocktail_sort
 
 import random
 
@@ -92,7 +93,9 @@ def start_algorithm():
     
     elif algorithm_menu.get() == "Heap Sort": 
         heap_sort(data_list, draw_data, speed_scale.get())
-
+    
+    elif algorithm_menu.get() == "Cocktail Sort": 
+        cocktail_sort(data_list, draw_data, speed_scale.get())
 
 # seperating the layouts
 ui_frame = Frame(root, width=600, height=200, bg="grey")
@@ -117,6 +120,7 @@ algorithm_menu = ttk.Combobox(
         "Quick Sort",
         "Merge Sort",
         "Heap Sort",
+        "Cocktail Sort"
     ],
 )
 algorithm_menu.grid(row=0, column=1, padx=5, pady=5)
