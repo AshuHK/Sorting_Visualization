@@ -112,6 +112,7 @@ algorithm_menu = ttk.Combobox(
         "Insertion Sort",
         "Quick Sort",
         "Merge Sort",
+        "Heap Sort",
     ],
 )
 algorithm_menu.grid(row=0, column=1, padx=5, pady=5)
@@ -142,7 +143,7 @@ Label(ui_frame, text="Size: ", bg="grey").grid(
 size_entry = Entry(ui_frame)
 size_entry.grid(row=1, column=1, padx=5, pady=5, sticky="w")
 
-# button for generating the data set 
+# button for generating the data set
 Button(ui_frame, text="Generate", command=generate, bg="white").grid(
     row=1, column=2, padx=5, pady=5
 )
