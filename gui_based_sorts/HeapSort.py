@@ -20,7 +20,7 @@ def heapify(data_list, size, root_index, draw_data, time_value):
 
         for x in range(len(color_list)):
             if (x == root_index) or (x == largest_index):
-                color_list[x] = "yellow"
+                color_list[x] = "blue"
 
         draw_data(data_list, color_list)
         time.sleep(time_value)
