@@ -6,6 +6,7 @@ from SelectionSort import selection_sort
 from InsertionSort import insertion_sort
 from QuickSort import quick_sort
 from MergeSort import merge_sort
+from HeapSort import heap_sort
 
 import random
 
@@ -88,6 +89,9 @@ def start_algorithm():
 
     elif algorithm_menu.get() == "Merge Sort":
         merge_sort(data_list, 0, len(data_list) - 1, draw_data, speed_scale.get())
+    
+    elif algorithm_menu.get() == "Heap Sort": 
+        heap_sort(data_list, 0, len(data_list) - 1, draw_data, speed_scale.get())
 
 
 # seperating the layouts
