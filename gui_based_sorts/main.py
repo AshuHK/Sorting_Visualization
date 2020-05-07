@@ -122,7 +122,7 @@ algorithm_menu = ttk.Combobox(
 algorithm_menu.grid(row=0, column=1, padx=5, pady=5)
 
 # set the default algorithm to be the first one in the list
-algorithm_menu.current(0)
+algorithm_menu.current(5)
 
 # speed scale for how fast each operation should take to visualize
 speed_scale = Scale(
