@@ -50,11 +50,11 @@ def heapify(data_list, size, root_index, draw_data, time_value):
 def heap_sort(data_list, draw_data, time_value):
     """
     Does a heap sort on a list and visualizes the steps
-    Expected Complexity (Sort only): O(n*log(n)) (time) and O(1) (space) 
+    Expected Complexity (Sort only): O(n*log(n)) (time) and O(1) (space)
 
-    :param data_list: Python list to be sorted 
-    :param draw_data: Function written in main.py that visualizes the list 
-    :param time_value: Float based on the input for time between each step 
+    :param data_list: Python list to be sorted
+    :param draw_data: Function written in main.py that visualizes the list
+    :param time_value: Float based on the input for time between each step
     """
 
     # heapifies the list
@@ -68,19 +68,20 @@ def heap_sort(data_list, draw_data, time_value):
     for i in range(len(data_list) - 1, 0, -1):
         _swap(data_list, i, 0)
 
-        # color the two elements being swapped green 
+        # generate the color list to be visualized
         color_list = ["red" for x in range(len(data_list))]
 
+        # color the two elements being swapped green
         for x in range(len(color_list)):
             if (x == i) or (x == 0):
                 color_list[x] = "green"
 
-        # visualize the swap and wait the specified amount of time 
+        # visualize the swap and wait the specified amount of time
         draw_data(data_list, color_list)
         time.sleep(time_value)
 
-        # heapify the remaining portion of the list 
+        # heapify the remaining portion of the list
         heapify(data_list, i, 0, draw_data, time_value)
 
-    # color the whole list as green after the sort 
+    # color the whole list as green after the sort
     draw_data(data_list, ["green" for i in range(len(data_list))])

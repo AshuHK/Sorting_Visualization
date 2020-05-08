@@ -14,10 +14,12 @@ def insertion_sort(data_list, draw_data, time_value):
     for i in range(1, len(data_list)):
         j = i
 
+        # takes one of the remaining values and inserts it back in the list 
         while (j > 0) and (data_list[j] < data_list[j - 1]):
             _swap(data_list, j, j - 1)
             j -= 1
 
+            # 
             color_list = ["red" for x in range(len(data_list))]
 
             for x in range(len(color_list)):
