@@ -7,7 +7,7 @@ def selection_sort(data_list, draw_data, time_value):
     Does a selection sort on a list and visualizes it 
     Expected Complexity (Sort only): O(n^2) (time) and O(1) (space) 
 
-    :param data_list: 
+    :param data_list: Python list to be sorted 
     :param draw_data: 
     :param time_value: 
     """
