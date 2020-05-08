@@ -19,17 +19,21 @@ def cocktail_sort(data_list, draw_data, time_value):
 
     while swapped_bool == True:
         swapped_bool = False
-
+        
+        # similar to bubble sort, moves the largest values to the top 
         for i in range(start_index, end_index):
             if data_list[i] > data_list[i + 1]:
                 _swap(data_list, i, i + 1)
-
+                
+                # generate the color list for the visualization function
                 color_list = ["red" for i in range(len(data_list))]
 
+                # color the two elements being swapped green 
                 for x in range(len(color_list)):
                     if (x == i) or (x == i + 1):
                         color_list[x] = "blue"
 
+                # visualize the step
                 draw_data(data_list, color_list)
                 time.sleep(time_value)
 

@@ -27,7 +27,7 @@ def bubble_sort(data_list, draw_data, time_value):
                     if (x == j) or (x == j + 1):
                         color_list[x] = "green"
 
-                # visualize the results and wait for the time specified
+                # visualize the step and wait for the time specified
                 draw_data(data_list, color_list)
                 time.sleep(time_value)
 
