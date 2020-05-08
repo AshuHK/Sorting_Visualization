@@ -37,11 +37,11 @@ def generate_results(test_list, total_time, sort_type):
 
 def test_bubble(user_int):
 
-    # build the test list 
+    # build the test list
     test_list = [i for i in range(user_int)]
     random.shuffle(test_list)
-    
-    # time tracking of the sort   
+
+    # time tracking of the sort
     start_time = time.time()
     bubble_sort(test_list)
     final_time = time.time()
@@ -57,16 +57,16 @@ def test_bubble(user_int):
 
 def test_insertion(user_int):
 
-    # build the test list 
+    # build the test list
     test_list = [i for i in range(user_int)]
     random.shuffle(test_list)
 
-    # time tracking of the sort  
+    # time tracking of the sort
     start_time = time.time()
     insertion_sort(test_list, 0, len(test_list) - 1)
     final_time = time.time()
 
-    # generate and print results 
+    # generate and print results
     total_time = final_time - start_time
     result_str = generate_results(test_list, total_time, "Insertion")
 
@@ -77,16 +77,16 @@ def test_insertion(user_int):
 
 def test_selection(user_int):
 
-    # build the test list 
+    # build the test list
     test_list = [i for i in range(user_int)]
     random.shuffle(test_list)
 
-    # time tracking of the sort 
+    # time tracking of the sort
     start_time = time.time()
     selection_sort(test_list)
     final_time = time.time()
 
-    # generate and print results 
+    # generate and print results
     total_time = final_time - start_time
     result_str = generate_results(test_list, total_time, "Selection")
 
@@ -97,16 +97,16 @@ def test_selection(user_int):
 
 def test_quick(user_int):
 
-    # build the test list 
+    # build the test list
     test_list = [i for i in range(user_int)]
     random.shuffle(test_list)
 
-    # time tracking of the sort 
+    # time tracking of the sort
     start_time = time.time()
     quick_sort(test_list, 0, len(test_list) - 1)
     final_time = time.time()
 
-    # generate and print results 
+    # generate and print results
     total_time = final_time - start_time
     result_str = generate_results(test_list, total_time, "    Quick")
 
@@ -116,17 +116,17 @@ def test_quick(user_int):
 
 
 def test_merge(user_int):
-    
-    # build the test list 
+
+    # build the test list
     test_list = [i for i in range(user_int)]
     random.shuffle(test_list)
 
-    # time tracking of the sort 
+    # time tracking of the sort
     start_time = time.time()
     merge_sort(test_list)
     final_time = time.time()
 
-    # generate and print results 
+    # generate and print results
     total_time = final_time - start_time
     result_str = generate_results(test_list, total_time, "    Merge")
 
