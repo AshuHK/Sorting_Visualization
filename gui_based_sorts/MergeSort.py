@@ -60,9 +60,9 @@ def merge_sort(data_list, start, end, draw_data, time_value):
     Does a merge sort and visualizes the steps
     Expected Complexity (Sort only): O(n*log(n)) (time) and O(n) (space)
 
-    :param data_list: Python list to be sorted 
-    :param start: Integer for the starting index in the list 
-    :param end: Integer for the ending index in the list 
+    :param data_list: Python list to be sorted
+    :param start: Integer for the starting index in the list
+    :param end: Integer for the ending index in the list
     :param draw_data: Function written in main.py to visualize the list
     :param time_value: Float based on the input for the time between steps
     """
@@ -85,31 +85,31 @@ def merge_sort(data_list, start, end, draw_data, time_value):
 
 def get_color_list(length, start, middle, end):
     """
-    Creates a color list based on the indicies given 
-    Expected Complexity: O(log(n)) (time) and O(1) (space) 
+    Creates a color list based on the indicies given
+    Expected Complexity: O(log(n)) (time) and O(1) (space)
 
-    :param length: Integer for the size of the sublist  
-    :param start: Integer for the starting index in the list 
-    :param middle: Integer for the middle index in the list 
-    :param end: Integer for the ending index in the list 
+    :param length: Integer for the size of the sublist
+    :param start: Integer for the starting index in the list
+    :param middle: Integer for the middle index in the list
+    :param end: Integer for the ending index in the list
     """
 
     color_list = []
 
     for i in range(length):
 
-        # seperate the sub lists in two different colors 
+        # seperate the sub lists in two different colors
         if (i >= start) and (i <= end):
 
-            # blue for the lower half 
+            # blue for the lower half
             if (i >= start) and (i <= middle):
                 color_list.append("blue")
 
-            # orange for the upper half 
+            # orange for the upper half
             else:
                 color_list.append("orange")
-        
-        # red for the rest of the list 
+
+        # red for the rest of the list
         else:
             color_list.append("red")
 
