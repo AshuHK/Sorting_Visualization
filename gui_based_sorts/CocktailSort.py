@@ -3,6 +3,10 @@ from Swap import _swap
 
 
 def cocktail_sort(data_list, draw_data, time_value):
+    """
+    Does a cocktail sort on a list and
+    """
+
     swapped_bool = True
     start_index = 0
     end_index = len(data_list) - 1
