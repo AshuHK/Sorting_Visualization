@@ -1,6 +1,8 @@
 def _swap(test_list, x, y):
     """
     Conducts a Pythonic swap within a list between two indicies
+        - Note: the order of x and y do not matter as long as both are in an
+                acceptable range [0, len(test_list)]
     Expected Complexity: O(1) (time and space)
 
     :param some_list: Python list of integers where the swap will be done
