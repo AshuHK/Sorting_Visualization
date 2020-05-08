@@ -4,7 +4,7 @@ from Swap import _swap
 
 def bubble_sort(data_list, draw_data, time_value):
     """
-    Does a bubble sort on a list and visualize the results
+    Does a bubble sort on a list and visualize the sort
     Expected Complexity (Sort Only): O(n^2) (time) and O(1) (space)
 
     :param data_list: Python list to be sorted
