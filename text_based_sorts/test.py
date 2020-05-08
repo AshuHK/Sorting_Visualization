@@ -158,7 +158,7 @@ def main():
         # sets a default size as exception handling 
         user_int = 1000
 
-    # run the test suite 
+    # run the test suite
     print("\n")
 
     test_bubble(user_int)
