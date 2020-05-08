@@ -33,34 +33,43 @@ def cocktail_sort(data_list, draw_data, time_value):
                     if (x == i) or (x == i + 1):
                         color_list[x] = "blue"
 
-                # visualize the step
+                # visualize the step and wait for the specified amount of time 
                 draw_data(data_list, color_list)
                 time.sleep(time_value)
 
+                # keep the sort going 
                 swapped_bool = True
 
+        # stops after each element has been swapped in the right place 
         if swapped_bool == False:
             break
 
         swapped_bool = False
 
+        # move the end iterator one back 
         end_index -= 1
 
+        # does the opposite of the first half, moving values to the bottom
         for i in range(end_index - 1, start_index - 1, -1):
             if data_list[i] > data_list[i + 1]:
                 _swap(data_list, i, i + 1)
 
+                # generate the color list for the visualization function
                 color_list = ["red" for i in range(len(data_list))]
 
+                # color the two elements being swapped green
                 for x in range(len(color_list)):
                     if (x == i) or (x == i + 1):
                         color_list[x] = "orange"
 
+                # visualize the step and wait for the specified amount of time 
                 draw_data(data_list, color_list)
                 time.sleep(time_value)
 
                 swapped_bool = True
 
+        # move the starting iterator one forward 
         start_index += 1
 
+    # finally color all of the values in the list green after the sort 
     draw_data(data_list, ["green" for i in range(len(data_list))])
