@@ -3,6 +3,14 @@ from Swap import _swap
 
 
 def insertion_sort(data_list, draw_data, time_value):
+    """
+    Does an insertion list and visualizes the steps 
+    Expected Complexity (Sort only): O(n^2) (time) and O(1) (space) 
+
+    :param data_list: Python list to be sorted 
+    :param draw_data: Function written in main.py that visualizes the list 
+    :param time_value: Float based on the input for time between each step 
+    """
     for i in range(1, len(data_list)):
         j = i
 
