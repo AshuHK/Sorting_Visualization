@@ -7,16 +7,19 @@ def heapify(data_list, size, root_index, draw_data, time_value):
     Heapifies the list and visualizes the steps 
     Expected Complexity (heapify only): O(log(n)) (time) and O(1) (space) 
 
-    :param data_list: 
-    :param size: 
-    :param root_index: 
-    :param draw_data: 
-    :param time_value: 
+    :param data_list: Python list to be heapified 
+    :param size: Integer of the size of the list to be heapified 
+    :param root_index: Integer of the index in the list of the root 
+    :param draw_data: Function written in main.py that visualizes the steps
+    :param time_value: Float based on the input for time between each step 
     """
+
+    # declare and locate the largest index and the children of the root 
     largest_index = root_index
     left_index = (2 * root_index) + 1
     right_index = (2 * root_index) + 2
 
+    # 
     if (left_index < size) and (data_list[root_index] < data_list[left_index]):
         largest_index = left_index
 
