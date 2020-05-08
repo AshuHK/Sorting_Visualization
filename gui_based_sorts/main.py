@@ -27,11 +27,11 @@ data_list = []
 
 def draw_data(data_list, color_list):
     """
-    Draws the list based with the color list for each corresponding element 
-    Expected Complexity: O(n) (time) and O(n) (space) 
+    Draws the list based with the color list for each corresponding element
+    Expected Complexity: O(n) (time) and O(n) (space)
 
-    :param data_list: Python list of integers to be visualized 
-    :param color_list: Python list of strings of colors to be applied 
+    :param data_list: Python list of integers to be visualized
+    :param color_list: Python list of strings of colors to be applied
     """
 
     # removes any previous data that was on the canvas
@@ -66,7 +66,8 @@ def draw_data(data_list, color_list):
 
 def generate():
     """
-    Generate a random set of data based on the size of from the user 
+    Generate a random set of data based on the size of from the user
+    Expected Complexity: O(log(n)) (time) and O(n) (space)
     """
 
     global data_list
@@ -74,8 +75,8 @@ def generate():
     try:
         # pull the size from the user
         size_value = int(size_entry.get())
-    
-    # sets the default value to 30 as exception handling 
+
+    # sets the default value to 30 as exception handling
     except ValueError:
         size_value = 30
 
@@ -83,10 +84,10 @@ def generate():
     if (size_value > 30) or (size_value < 3):
         size_value = 30
 
-    # create the list of each value from 1 to the size from the user 
+    # create the list of each value from 1 to the size from the user
     data_list = [i for i in range(1, size_value + 1)]
 
-    # makes the list random by shuffling the list 
+    # makes the list random by shuffling the list
     random.shuffle(data_list)
 
     # visualize the data set for the user to see
@@ -94,6 +95,11 @@ def generate():
 
 
 def start_algorithm():
+    """
+    Starts the algorithm based on the selection from the user in the ComboBox
+    Expected Complexity: dependent on the sort selected
+    """
+
     global data_list
 
     if algorithm_menu.get() == "Bubble Sort":
@@ -121,7 +127,7 @@ def start_algorithm():
 ui_frame = Frame(root, width=600, height=200, bg="grey")
 ui_frame.grid(row=0, column=0, padx=10, pady=5)
 
-# space for the data and sorting to be visualized 
+# space for the data and sorting to be visualized
 canvas = Canvas(root, width=600, height=380, bg="white")
 canvas.grid(row=1, column=0, padx=10, pady=5)
 
@@ -177,4 +183,5 @@ Button(ui_frame, text="Generate", command=generate, bg="white").grid(
     row=1, column=2, padx=5, pady=5
 )
 
+# run the main loop and start the application
 root.mainloop()
