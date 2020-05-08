@@ -1,6 +1,8 @@
+# imports for the GUI
 from tkinter import *
 from tkinter import ttk
 
+# imports for the sorts
 from BubbleSort import bubble_sort
 from SelectionSort import selection_sort
 from InsertionSort import insertion_sort
@@ -9,6 +11,7 @@ from MergeSort import merge_sort
 from HeapSort import heap_sort
 from CocktailSort import cocktail_sort
 
+# used to generate the data list
 import random
 
 # build the window base
@@ -23,6 +26,8 @@ data_list = []
 
 
 def draw_data(data_list, color_list):
+    """
+    """
 
     # removes any previous data that was on the canvas
     canvas.delete("all")
@@ -50,6 +55,7 @@ def draw_data(data_list, color_list):
         canvas.create_rectangle(x0, y0, x1, y1, fill=color_list[i])
         canvas.create_text(x0 + 2, y0, anchor="sw", text=str(data_list[i]))
 
+    # updates the whole window
     root.update()
 
 
@@ -90,11 +96,11 @@ def start_algorithm():
 
     elif algorithm_menu.get() == "Merge Sort":
         merge_sort(data_list, 0, len(data_list) - 1, draw_data, speed_scale.get())
-    
-    elif algorithm_menu.get() == "Heap Sort": 
+
+    elif algorithm_menu.get() == "Heap Sort":
         heap_sort(data_list, draw_data, speed_scale.get())
-    
-    elif algorithm_menu.get() == "Cocktail Sort": 
+
+    elif algorithm_menu.get() == "Cocktail Sort":
         cocktail_sort(data_list, draw_data, speed_scale.get())
 
 # seperating the layouts
