@@ -4,9 +4,15 @@ from Swap import _swap
 
 def cocktail_sort(data_list, draw_data, time_value):
     """
-    Does a cocktail sort on a list and
+    Does a cocktail sort on a list and visualze the sort 
+    Expected Complexity (Sort Only): O(n^2) (time) and O(1) (space) 
+
+    :param data_list: Python list to be sorted 
+    :param draw_data: function written in main.py that visualizes the list 
+    :param time_value: Float based on the input for time between each step
     """
 
+    # declare and initalize basic variables
     swapped_bool = True
     start_index = 0
     end_index = len(data_list) - 1
