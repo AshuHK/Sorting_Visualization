@@ -136,7 +136,8 @@ def test_merge(user_int):
 
 
 def main():
-
+    
+    # print a warning for the user about the O(n^2) algorithms 
     warning_str = """
     The first 3 sorts in this program (bubble, insertion, and selection)
     will take a significant amount of time if you input something greater
@@ -145,6 +146,7 @@ def main():
 
     print(warning_str)
 
+    # take input for the size 
     try:
         user_int = int(input("\nInput the size of the list to be generated: "))
 
@@ -152,8 +154,11 @@ def main():
             user_int *= -1
 
     except ValueError:
+        
+        # sets a default size as exception handling 
         user_int = 1000
 
+    # run the test suite 
     print("\n")
 
     test_bubble(user_int)
