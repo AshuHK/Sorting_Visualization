@@ -4,21 +4,21 @@ import time
 def merge(data_list, start, middle, end, draw_data, time_value):
     """
     Merges the sublist of the array and visualize the step
-    Expected Complexity (Merge only): O(n*log(n)) (time) and O(n) (space) 
+    Expected Complexity (Merge only): O(n*log(n)) (time) and O(n) (space)
 
-    :param data_list: Python list to merged 
-    :param start: Integer for the starting index in the list 
-    :param middle: Integer for the middle index in the list 
-    :param end: Integer for the ending index in the list 
-    :param draw_data: Function written in main.py to visualize the steps 
+    :param data_list: Python list to merged
+    :param start: Integer for the starting index in the list
+    :param middle: Integer for the middle index in the list
+    :param end: Integer for the ending index in the list
+    :param draw_data: Function written in main.py to visualize the steps
     :param time_value: Float based on the input for the time between steps
     """
 
-    # visualize the sub list found and wait the specified amount of time 
+    # visualize the sub list found and wait the specified amount of time
     draw_data(data_list, get_color_list(len(data_list), start, middle, end))
     time.sleep(time_value)
 
-    # seperate the list in half 
+    # seperate the list in half
     start_list = data_list[start : middle + 1]
     end_list = data_list[middle + 1 : end + 1]
 
@@ -26,7 +26,7 @@ def merge(data_list, start, middle, end, draw_data, time_value):
     right_index = 0
 
     for i in range(start, end + 1):
-        # does the merging for the two halves of the sublists  
+        # does the merging for the two halves of the sublists
         if left_index < len(start_list) and right_index < len(end_list):
             if start_list[left_index] <= end_list[right_index]:
                 data_list[i] = start_list[left_index]
@@ -42,20 +42,30 @@ def merge(data_list, start, middle, end, draw_data, time_value):
             data_list[i] = end_list[right_index]
             right_index += 1
 
-    # generate the color list to be visualized 
+    # generate the color list to be visualized
     color_list = ["red" for i in range(len(data_list))]
 
     # color the values being placed back in the original list green
     for i in range(len(color_list)):
         if (i >= start) and (i <= end):
             color_list[i] = "green"
-    
-    # visualize the step and wait for the specified amount of time 
+
+    # visualize the step and wait for the specified amount of time
     draw_data(data_list, color_list)
     time.sleep(time_value)
 
 
 def merge_sort(data_list, start, end, draw_data, time_value):
+    """
+    Does a merge sort and visualizes the steps
+    Expected Complexity (Sort only): O(n*log(n)) (time) and O(n) (space)
+
+    :param data_list:
+    :param start:
+    :param end:
+    :param draw_data:
+    :param time_value:
+    """
     if start >= end:
         return
 
@@ -67,7 +77,7 @@ def merge_sort(data_list, start, end, draw_data, time_value):
     # sort the second half of the data
     merge_sort(data_list, middle_index + 1, end, draw_data, time_value)
 
-    # combine the two halves 
+    # combine the two halves
     merge(data_list, start, middle_index, end, draw_data, time_value)
 
 
