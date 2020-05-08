@@ -4,11 +4,11 @@ from Swap import _swap
 
 def selection_sort(data_list, draw_data, time_value):
     """
-    Does a selection sort on a list and visualizes it 
-    Expected Complexity (Sort only): O(n^2) (time) and O(1) (space) 
+    Does a selection sort on a list and visualizes it
+    Expected Complexity (Sort only): O(n^2) (time) and O(1) (space)
 
-    :param data_list: Python list to be sorted 
-    :param draw_data: Function written in main.py to visualize the list 
+    :param data_list: Python list to be sorted
+    :param draw_data: Function written in main.py to visualize the list
     :param time_value: Float based on the input for the time between steps
     """
     for i in range(len(data_list)):
@@ -21,7 +21,7 @@ def selection_sort(data_list, draw_data, time_value):
 
         _swap(data_list, i, min_index)
 
-        # generate the color list to be visualized 
+        # generate the color list to be visualized
         color_list = ["red" for x in range(len(data_list))]
 
         # color the values being swapped green
@@ -29,9 +29,9 @@ def selection_sort(data_list, draw_data, time_value):
             if (x == i) or (x == min_index):
                 color_list[x] = "green"
 
-        # visualize the list and wait for the specified amount of time 
+        # visualize the list and wait for the specified amount of time
         draw_data(data_list, color_list)
         time.sleep(time_value)
 
-    # color the whole list green after the sort 
+    # color the whole list green after the sort
     draw_data(data_list, ["green" for i in range(len(data_list))])
