@@ -27,6 +27,11 @@ data_list = []
 
 def draw_data(data_list, color_list):
     """
+    Draws the list based with the color list for each corresponding element 
+    Expected Complexity: O(n) (time) and O(n) (space) 
+
+    :param data_list: Python list of integers to be visualized 
+    :param color_list: Python list of strings of colors to be applied 
     """
 
     # removes any previous data that was on the canvas
@@ -60,11 +65,17 @@ def draw_data(data_list, color_list):
 
 
 def generate():
+    """
+    Generate a random set of data based on the size of from the user 
+    """
+
     global data_list
 
     try:
         # pull the size from the user
         size_value = int(size_entry.get())
+    
+    # sets the default value to 30 as exception handling 
     except ValueError:
         size_value = 30
 
@@ -72,10 +83,13 @@ def generate():
     if (size_value > 30) or (size_value < 3):
         size_value = 30
 
-    # create the list of random data
+    # create the list of each value from 1 to the size from the user 
     data_list = [i for i in range(1, size_value + 1)]
+
+    # makes the list random by shuffling the list 
     random.shuffle(data_list)
 
+    # visualize the data set for the user to see
     draw_data(data_list, ["red" for x in range(len(data_list))])
 
 
@@ -103,10 +117,11 @@ def start_algorithm():
     elif algorithm_menu.get() == "Cocktail Sort":
         cocktail_sort(data_list, draw_data, speed_scale.get())
 
-# seperating the layouts
+# seperating the layouts (inputs for the user)
 ui_frame = Frame(root, width=600, height=200, bg="grey")
 ui_frame.grid(row=0, column=0, padx=10, pady=5)
 
+# space for the data and sorting to be visualized 
 canvas = Canvas(root, width=600, height=380, bg="white")
 canvas.grid(row=1, column=0, padx=10, pady=5)
 
