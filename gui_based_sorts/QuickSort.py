@@ -10,6 +10,8 @@ def find_pivot(data_list, start, end):
     :param data_list: Python list to find the pivot value in  
     :param start: Integer for the starting index within the list 
     :param end: Integer for the ending index within the list 
+
+    :return: Integer for the pivot value found using the median of three method 
     """
 
     # pull the first, middle, and last values in the sublist 
@@ -29,21 +31,36 @@ def find_pivot(data_list, start, end):
 
 
 def partition(data_list, start, end, draw_data, time_value):
+    """
+    Partitions the sub list and visualizes the steps 
+    Expected Complexity: O(n) (time) and O(1) (space) 
+
+    :param data_list: Python list to be partitioned  
+    :param start: Integer for the starting index in the list 
+    :param end: Integer for the ending index in the list 
+    :param draw_data: Function written in main.py that visualizes the list 
+    :param time_value: Float based on the input for time between steps
+    """
     pivot_value = find_pivot(data_list, start, end)
 
     i = start - 1
 
     for j in range(start, end + 1):
+
+        # moves each value that is less than the pivot to the left 
         if data_list[j] < pivot_value:
             i += 1
             _swap(data_list, i, j)
-
+            
+            # generate the color list to be visualized 
             color_list = ["red" for x in range(len(data_list))]
 
+            # color the values being swapped green
             for x in range(len(color_list)):
                 if (x == i) or (x == j):
                     color_list[x] = "green"
 
+            # visualizes the list and wait for the specified amount of time 
             draw_data(data_list, color_list)
             time.sleep(time_value)
 
