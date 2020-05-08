@@ -88,7 +88,16 @@ def partition(data_list, start, end, draw_data, time_value):
 
 
 def quick_sort(data_list, start, end, draw_data, time_value):
+    """
+    Does a quick sort on the list and visualizes the steps
+    Expected Complexity (Sort only): O(n*log(n)) (time) and O(1) (space) 
 
+    :param data_list: Python list to be sorted 
+    :param start: Integer of the starting index in the list 
+    :param end: Integer of the ending index in the list 
+    :param draw_data: Function written in main.py to visualize the list 
+    :param time_value: Float based on the input for the time between steps
+    """
     # stop when the start and end index are equal (or when start > end)
     if start >= end:
         return
