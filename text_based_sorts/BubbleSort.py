@@ -10,5 +10,7 @@ def bubble_sort(unsorted):
     """
     for i in range(len(unsorted) - 1): 
         for j in range(0, len(unsorted) - i - 1): 
+
+            # bubbles up the largest value through the list 
             if unsorted[j] > unsorted[j + 1]: 
                 _swap(unsorted, j, j + 1)
