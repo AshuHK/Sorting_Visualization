@@ -3,6 +3,14 @@ from Swap import _swap
 
 
 def selection_sort(data_list, draw_data, time_value):
+    """
+    Does a selection sort on a list and visualizes it 
+    Expected Complexity (Sort only): O(n^2) (time) and O(1) (space) 
+
+    :param data_list: 
+    :param draw_data: 
+    :param time_value: 
+    """
     for i in range(len(data_list)):
         min_index = i
 
