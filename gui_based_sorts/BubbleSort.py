@@ -31,4 +31,5 @@ def bubble_sort(data_list, draw_data, time_value):
                 draw_data(data_list, color_list)
                 time.sleep(time_value)
 
+    # finally color all of the elements in the list green after the sort
     draw_data(data_list, ["green" for i in range(len(data_list))])
