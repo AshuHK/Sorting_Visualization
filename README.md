@@ -20,7 +20,7 @@ git clone https://github.com/AshuHK/Sorting_Visualization.git
 
 ### Prerequisites
 
-- Python 3.8: the programming languaged used to build the visualizer
+- Python 3.8: the programming language used to build the visualizer
   * Installation instructions can be found at their website [here](https://www.python.org/downloads/)
 - Tkinter: the GUI framework to build the visualizer
   * Installation instructions can be found at their website [here](https://tkdocs.com/tutorial/install.html) too
