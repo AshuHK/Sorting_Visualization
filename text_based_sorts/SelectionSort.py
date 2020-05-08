@@ -10,6 +10,7 @@ def selection_sort(unsorted):
     """
     for i in range(len(unsorted)):
 
+        # look at each of the remaining values and locate the max value
         min_index = i
         for j in range(i + 1, len(unsorted)):
             if unsorted[min_index] > unsorted[j]:
