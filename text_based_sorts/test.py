@@ -5,6 +5,7 @@ from BubbleSort import bubble_sort
 from QuickSort import quick_sort
 from MergeSort import merge_sort
 
+# used to generate the rules
 import random
 import time
 
@@ -19,25 +20,33 @@ def generate_results(test_list, total_time, sort_type):
     :param sort_type: String of the done to get the result
     """
 
+    # create an empty string
     result_str = ""
+
+    # add the appropriate string based on if the list is sorted
     if test_list == sorted(test_list):
         result_str += "Test: Successful\t"
     else:
         result_str += "Test: Fail\t"
 
+    # build the final string with the sort type given
     result_str += "{} sort time: {:5f} seconds".format(sort_type, total_time)
 
     return result_str
 
 
 def test_bubble(user_int):
+
+    # build the test list 
     test_list = [i for i in range(user_int)]
     random.shuffle(test_list)
-
+    
+    # time tracking of the sort   
     start_time = time.time()
     bubble_sort(test_list)
     final_time = time.time()
 
+    # generate and print results
     total_time = final_time - start_time
     result_str = generate_results(test_list, total_time, "   Bubble")
 
@@ -47,13 +56,17 @@ def test_bubble(user_int):
 
 
 def test_insertion(user_int):
+
+    # build the test list 
     test_list = [i for i in range(user_int)]
     random.shuffle(test_list)
 
+    # time tracking of the sort  
     start_time = time.time()
     insertion_sort(test_list, 0, len(test_list) - 1)
     final_time = time.time()
 
+    # generate and print results 
     total_time = final_time - start_time
     result_str = generate_results(test_list, total_time, "Insertion")
 
@@ -128,9 +141,9 @@ def main():
 
     except ValueError:
         user_int = 1000
-    
+
     print("\n")
-    
+
     test_bubble(user_int)
     test_insertion(user_int)
     test_selection(user_int)
