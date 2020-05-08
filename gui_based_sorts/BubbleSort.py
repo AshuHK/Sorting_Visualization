@@ -8,8 +8,8 @@ def bubble_sort(data_list, draw_data, time_value):
     Expected Complexity (Sort Only): O(n^2) (time) and O(1) (space) 
 
     :param data_list: Python list to be sorted 
-    :param draw_data: Python function written in main.py that visualizes the list
-    :param time_value: 
+    :param draw_data: Function written in main.py that visualizes the list
+    :param time_value: Float based on the input for time between each step
     """
     for i in range(len(data_list) - 1):
 
