@@ -13,8 +13,8 @@ def insertion_sort(unsorted, start, end):
 
     for i in range(1, end + 1):
         j = i
-        
-        # pulls the smallest of the remaining values and inserts it back in the list 
+
+        # pulls the smallest of the remaining values and inserts it back in the list
         while (j > 0) and (unsorted[j] < unsorted[j - 1]):
             _swap(unsorted, j, j - 1)
             j -= 1
