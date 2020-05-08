@@ -3,10 +3,21 @@ from Swap import _swap
 
 
 def find_pivot(data_list, start, end):
+    """
+    Finds the pivot value with in the sub list using the median of three method
+    Expected Complexity: O(1) (time and space) 
+
+    :param data_list: Python list to find the pivot value in  
+    :param start: Integer for the starting index within the list 
+    :param end: Integer for the ending index within the list 
+    """
+
+    # pull the first, middle, and last values in the sublist 
     first = data_list[start]
     middle = data_list[(start + end) // 2]
     last = data_list[end]
 
+    # this was done so that it could be done in constant time 
     if (middle <= first <= last) or (last <= first <= middle):
         return first
 
@@ -53,6 +64,8 @@ def partition(data_list, start, end, draw_data, time_value):
 
 
 def quick_sort(data_list, start, end, draw_data, time_value):
+
+    # stop when the start and end index are equal (or when start > end)
     if start >= end:
         return
 
@@ -64,4 +77,5 @@ def quick_sort(data_list, start, end, draw_data, time_value):
     # sorting the second half of the data
     quick_sort(data_list, pivot_index + 1, end, draw_data, time_value)
 
+    # color the whole list green after the sort 
     draw_data(data_list, ["green" for i in range(len(data_list))])
