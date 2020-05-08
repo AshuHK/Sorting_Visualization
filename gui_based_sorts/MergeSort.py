@@ -2,9 +2,23 @@ import time
 
 
 def merge(data_list, start, middle, end, draw_data, time_value):
+    """
+    Merges the sublist of the array and visualize the step
+    Expected Complexity (Merge only): O(n*log(n)) (time) and O(n) (space) 
+
+    :param data_list: 
+    :param start:
+    :param middle: 
+    :param end: 
+    :param draw_data:
+    :param time_value: 
+    """
+
+    # visualize the sub list found and wait the specified amount of time 
     draw_data(data_list, get_color_list(len(data_list), start, middle, end))
     time.sleep(time_value)
 
+    # seperate the list in half 
     start_list = data_list[start : middle + 1]
     end_list = data_list[middle + 1 : end + 1]
 
@@ -48,6 +62,7 @@ def merge_sort(data_list, start, end, draw_data, time_value):
     # sort the second half of the data
     merge_sort(data_list, middle_index + 1, end, draw_data, time_value)
 
+    # combine the two halves 
     merge(data_list, start, middle_index, end, draw_data, time_value)
 
 
