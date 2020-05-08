@@ -3,6 +3,16 @@ from Swap import _swap
 
 
 def heapify(data_list, size, root_index, draw_data, time_value):
+    """
+    Heapifies the list and visualizes the steps 
+    Expected Complexity (heapify only): O(log(n)) (time) and O(1) (space) 
+
+    :param data_list: 
+    :param size: 
+    :param root_index: 
+    :param draw_data: 
+    :param time_value: 
+    """
     largest_index = root_index
     left_index = (2 * root_index) + 1
     right_index = (2 * root_index) + 2
