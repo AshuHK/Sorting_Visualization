@@ -1,8 +1,5 @@
-# imports for the GUI
 from tkinter import *
 from tkinter import ttk
-
-# imports for the sorts
 from BubbleSort import bubble_sort
 from SelectionSort import selection_sort
 from InsertionSort import insertion_sort
@@ -10,8 +7,6 @@ from QuickSort import quick_sort
 from MergeSort import merge_sort
 from HeapSort import heap_sort
 from CocktailSort import cocktail_sort
-
-# used to generate the data list
 import random
 
 # build the window base
@@ -123,6 +118,7 @@ def start_algorithm():
     elif algorithm_menu.get() == "Cocktail Sort":
         cocktail_sort(data_list, draw_data, speed_scale.get())
 
+
 # seperating the layouts (inputs for the user)
 ui_frame = Frame(root, width=600, height=200, bg="grey")
 ui_frame.grid(row=0, column=0, padx=10, pady=5)
@@ -147,7 +143,7 @@ algorithm_menu = ttk.Combobox(
         "Quick Sort",
         "Merge Sort",
         "Heap Sort",
-        "Cocktail Sort"
+        "Cocktail Sort",
     ],
 )
 algorithm_menu.grid(row=0, column=1, padx=5, pady=5)
